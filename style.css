@@ -1,0 +1,121 @@
+body {
+  font: 20px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+div {
+  opacity: 0.9;
+  line-height: 28px;
+  padding: 50px;
+  text-align: justify;
+}
+
+#github {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #2e3a47;
+  border-radius: 4px;
+  position: absolute;
+  left: 400px;
+  top: 105px;
+}
+
+.s1 {
+  background: #0096d6;
+  color: #fff;
+}
+
+.s2 {
+  padding-right: 40%;
+}
+
+.s3 {
+  padding-left: 40%;
+}
+
+.s4 {
+  padding-right: 40%;
+}
+
+.s5 {
+  padding-left: 40%;
+}
+
+.s6 {
+  padding-right: 40%;
+}
+
+.s7 {
+  padding-left: 40%;
+}
+
+.s8 {
+  padding-right: 40%;
+}
+
+.s9 {
+  padding-left: 40%;
+}
+
+.s10 {
+  padding-right: 40%;
+}
+
+.s11 {
+  padding-left: 40%;
+}
+
+.s12 {
+  padding-right: 40%;
+}
+
+.s13 {
+  padding-left: 40%;
+}
+
+.s14 {
+  padding-right: 40%;
+}
+
+.s15 {
+  padding-left: 40%;
+}
+
+.s16 {
+  padding-right: 40%;
+}
+
+.s17 {
+  padding-left: 40%;
+}
+
+.s18 {
+  padding-right: 40%;
+}
+
+.s19 {
+  padding-left: 40%;
+}
+
+.s20 {
+  padding-right: 40%;
+}
+
+p {
+}
+
+a {
+  color: #fff;
+}
+
+small {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+}
