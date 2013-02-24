@@ -142,15 +142,17 @@
     First, we need to be clear that Javascript and "browser based" 
     are not always the same thing.  
     Javascript code might be a HTML5 mobile app running on Android, 
-    or a NodeJS based desktop app created with something like 
-    <a href="http://appjs.org/">AppJS</a>.   
+    or a Node.js based desktop app created with something like 
+    <a href="http://appjs.org/">AppJS</a>.
     Each of these scenarios are ideal environments for deploying Crypton 
     applications and sidestep the objections to the browser environment.
     </p>
 
     <p>
     For browser based applications there are some mitigations available.
-    Chrome includes a native secure random number generator.
+    Chrome and Safari include a <a href="https://developer.mozilla.org/en-US/docs/DOM/window.crypto.getRandomValues">
+    native secure random number generator
+    </a>.
     Firefox is 
     <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322529">
     working on it
@@ -308,7 +310,7 @@
     Now consumers demand more than just file storage and file sharing.
     </p>
     <p>
-    We anticipate the emergence of zero knowledge apps 
+    We anticipate zero knowledge apps 
     with rich collaboration features that allow data coordination 
     and sharing between organically forming and organizing groups.  
     It's not just about files and folders anymore, but about 
@@ -373,6 +375,22 @@
     Instead of having to worry about low-level implementation details,
     the developer targets Crypton as they would target another database technology.
     </p>
+    <p>
+    As Crypton advances, the object database will gain advanced features, 
+    such as object relationship validation, 
+    automatically derived index objects,
+    and triggers.
+    </p>
+    <p>
+    Another topic is the added challenge of debugging.  
+    Server operators can't just "look into an account" to see what's going wrong 
+    in an application when an end user reports some problem.
+    Instead they have to try to reproduce the problem independently,
+    ask the user share the relevant data with the operators, 
+    or build a diagnostic reporting capabilities into the application itself.
+    This sort of problem solving takes some adjustment.  Such circumstances
+    further increase the value of development methodologies for finding bugs
+    before code reaches production.
   </div>
   <div class="img"></div>
   </div>
@@ -380,7 +398,11 @@
   <div class="img"></div>
   <div>
     <h3>How is Crypton's reference implementation built?</h3>
-    <p>TODO</p>
+    <p>Crypton's reference implementation uses 
+    <a href="http://nodejs.org/">nodejs</a> 
+    and <a href="">PostgreSQL</a> on the backend.
+    The client is Javascript suitable for browser environment or app packaging.
+    </p>
   </div>
   <div class="img"></div>
   </div>
@@ -407,8 +429,9 @@
     minor versions.
     </p>
     <p>
-    This is sustainable.  Over time, the majority of the framework's 
-    code base won't be the crypto code itself, 
+    This is sustainable.  
+    Over time, the majority of the framework's code base 
+    won't be the crypto code itself, 
     but rather object database features 
     and other higher level functionality built on top of the 
     crypto storage layer.
@@ -430,6 +453,7 @@
     several techniques is most likely to lead to reliable software.  
     Among these, human code review is the most important.
     </p>
+
     <p>
     Crypton is written with human review and testability in mind.  
     This means consistent style, simple single purpose functions, 
@@ -440,12 +464,13 @@
     </p>
 
     <p>
-    Additionally, Crypton uses all of the following:
+    Additionally, Crypton will use all of the following:
     </p>
 
     <ul>
-      <li>Static Analysis
-      <li>Standard Style Guide with Code Complexity Controls</li>
+      <li>Static Analysis</li>
+      <li>Style Guide</li> 
+      <li>Code Complexity Controls</li>
       <li>Unit Tests</li>
       <li>Integration Tests
       <li>Continuous Integration</li>
@@ -505,12 +530,13 @@
     <p>We also enjoy Zed Shaw's 
     <a href="http://zedshaw.com/essays/why_i_gpl.html">
     explanation of why he choses GPL
-    </a>, and his forth reason in particular.
+    </a>, the forth reason in particular.
     </p>
   </div>
   </div>
   <div class="s"><div>
     <h3>How far along is the reference implementation in the development cycle?</h3>
+
     <p>
     </p>
     <p>
@@ -520,9 +546,9 @@
     <p>
     </p>
 
-    <h3>What additional capabilities and enhancements will be added as the project matures?</h3>
+    <h3>What additional capabilities and enhancements will be added as the project grows?</h3>
     <ul>
-      <li>Client: Object DB: Efficient storage of BLOBs, 
+      <li>Client: Object DB: More efficient storage of BLOBs
       for easier storing of music, pictures, video, etc.</li>
       <li>Client: Object DB: Improved diff and patch implementations 
       for container saves, loads, and refreshes/updates.</li>
