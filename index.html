@@ -52,7 +52,7 @@
     <p>
     Crypton is the perfect fit for any developer wishing to provide end to end
     security and privacy without the hassle of securing a inherently open
-    environment such as Dropbox API or Amazon S3. With Crypton everything is
+    environment such as the Dropbox API or Amazon S3. With Crypton everything is
     meaningfully encrypted from day one.
     </p>
   </div>
@@ -60,13 +60,13 @@
     <h3>Why is it interesting?</h3>
     <p>
     More people are becoming 'privacy aware."  
-    Enterprises refuse to adopt solutions where the developer/service provider 
-    can access critical internal data.  
+    Enterprises refuse to adopt solutions where the developer and service 
+    provider can access critical internal data.  
     Crypton is the first application framework that provides a foundation 
     for building zero-knowledge cloud products.
     </p>
     <p>
-    With Crypton you can develop secure and private applications 
+    With Crypton you can develop privacy preserving applications 
     aimed at the already large and growing audience of 'privacy aware' customers 
     without the added burdens of writing cryptography, scaling databases, 
     or matching a cloud API with 3rd party security solutions.
@@ -91,7 +91,7 @@
     Building Crypto code is indeed 
     <a href="http://chargen.matasano.com/chargen/2009/7/22/if-youre-typing-the-letters-a-e-s-into-your-code-youre-doing.html">
     famously hard</a>.
-    We have some experience with cryptography, but most importantly 
+    We have some experience with cryptography, and most importantly 
     we have an understanding that it needs auditing and verification by experts, 
     and a development process that lends itself to this review.
     </p>
@@ -149,8 +149,10 @@
     Finally, remember the threat model we're protecting against.  
     Specifically we're protecting the service operators from the dangers 
     of having readable database of end user data.  
+    Simultaneously, we're protecting the end user from a service provider 
+    amassing a collection of the user's history and data.
     Most of the arguments against browser based crypto 
-    don't apply to this goal.
+    don't directly apply to these goals.
     </p>
   </div>
   <div class="s7">
@@ -161,8 +163,10 @@
     </p>
 
     <p>
-    For example 37signals Basecamp, 
-    a collaborative project management application, 
+    For example 
+    <a href="http://37signals.com/">37signals</a> 
+    <a href="http://basecamp.com/">Basecamp</a>, 
+    a collaborative time and project management application, 
     would be a good candidate.  
     Basecamp is an interface for organizing TODOs, tracking your time, 
     collecting documents, assets, timelines, calendars, and general 
@@ -175,126 +179,282 @@
     <p>Most importantly, the servers' administrator don't profit from seeing this data,
     and even get into trouble 
     <a href="http://37signals.com/svn/posts/3078-trust-is-fragile">
-    when looking at it</a>!  
+    when looking at it</a>!
     </p>
 
     <p>
-    Many applications will have a mix of content created by users and data supplied by the server, and may use Crypton for the sensitive stuff and traditional database storage for community data.  For example, a site like Reddit might only use Crypton for only a few features, such as the private messaging system where users send messages directly from one account to another, or a user's own list of saved posts and comments.
+    Many applications will have a mix of content 
+    created by users and data supplied by the server. 
+    They may use Crypton for the sensitive stuff 
+    and traditional database storage for public data.
+    
+    For example, a site like 
+    <a href="http://reddit.com/">Reddit</a>
+    might only use Crypton for only a few features, 
+    such as the private messaging system 
+    where users send messages directly from one account to another, 
+    or a user's own list of saved posts and comments.
     </p>
+
     <p>
-    In general, you can think of the most successful applications in any category, and ask yourself if the market has room for a competitor with meaningful end user privacy assurance?  How about Evernote with truly private notes that you could privately share with just the people you chose?  RescueTime?  Hipchat?  Skype?  Firebase?  Flickr?  Google Docs?  FreshBooks?
+    In general, you can think of the most successful applications 
+    across many categories, and ask yourself if the market has room 
+    for a competitor with meaningful end user privacy assurance.  
+    How about Evernote with truly private notes that you could 
+    privately share with just the people you chose?  
+    RescueTime?  Hipchat?  Skype?  Firebase?  Flickr?  Google Docs?  
+    FreshBooks?
     </p>
   </div>
   <div class="s8">
     <h3>What types of applications wouldn't work well with Crypton?</h3>
     <p>
-    It wouldn't make much sense to build Netflix with Crypton.  There's no opportunity for user data to be secret from the server.  All the "data" in the system is essentially data created by the server -- the directory of movies and shows available for viewing, and the viewing history of individual users.  The server necessarily knows which movies each user watches because it must stream them to that user.  The recommendation system is improved by direct calculations made from visible user history.
+    It wouldn't make much sense to build Netflix or Amazon with Crypton.
+    That's true for "multiple choice" apps in general.  
+    There's no opportunity for user data to be secret from the server.  
+    All the "data" in the system is essentially data created by the server 
+    &mdash; the directory of products and movies and shows available, 
+    and the browsing history of individual users.  
+    
+    The server necessarily knows which movies each user watches on Netflix, 
+    and which products they buy on Amazon.  
+    
+    In both cases, the recommendation system is improved by direct 
+    calculations made from visible user history.
+    The developers directly profit from visibility into this user data.
     </p>
   </div>
   <div class="s9">
     <h3>Why should application developers care about end users' privacy?</h3>
     <p>
-    Because having such data can get you into trouble.  http://www.nytimes.com/2013/02/17/technology/if-youre-collecting-our-data-you-ought-to-protect-it.html?_r=1&
+    Because having such data can 
+    <a href="http://www.nytimes.com/2013/02/17/technology/if-youre-collecting-our-data-you-ought-to-protect-it.html?_r=1&">
+    get you into trouble</a>.
     </p>
     <p>
     Because privacy is a feature you can sell.  If you had the choice between using an app where your data was exposed, and an app that guaranteed your privacy, which would you chose?
     </p>
     <p>
-    Because withholding privacy allows new competitors to gain a market toehold and become entrenched.  For example, if a competitor to Evernote emerged tomorrow which offered a subset of functionality but true privacy, some portion of the market would chose that competitor over Evernote.
+    Because withholding privacy allows new competitors 
+    to gain a market toehold and become entrenched.
+    For example, if a competitor to Evernote emerged tomorrow 
+    and offered a subset of functionality but true privacy, 
+    some portion of the market would chose that competitor over Evernote.
     </p>
     <p>
-    No matter how many additional innovations Evernote added, some portion of the market would continue to chose the private solution.  This allows the competitor a guaranteed customer base and revenue stream, allowing it become progressively more competitive over time.
+    No matter how many additional innovations Evernote added, 
+    some portion of the market would continue to chose the private solution.  
+    This allows the competitor a guaranteed customer base and revenue stream, 
+    allowing it become progressively more competitive over time.
     </p>
     <p>
-    Companies offering a freemium product should be especially concerned.  In the above example, end users are likely to chose the free Evernote for their less sensitive and public stuff while paying the competitor to protect their most important notes!
+    Companies offering a freemium product should be especially 
+    concerned about this last point.  
+    In the above example, end users are likely to chose the free Evernote 
+    for their less sensitive and public stuff 
+    while paying the competitor to protect their most important notes!
     </p>
   </div>
   <div class="s10">
     <h3>How can I stay informed of updates?</h3>
-    <p>Follow us on Twitter!  @spideroak, @crypton.io.  There's also the SpiderOak blog.  http://spideroak.com/blog/</p>
+    <p>Follow us on Twitter!</p>
+    <ul>
+      <li><a href="http://twitter.com/spideroak">@spideroak</a></li>
+      <li><a href="http://twitter.com/crypton.io">@crypton.io</a></li>
+    </ul>
+    <p>
+    There's also the 
+    <a href="https://spideroak.com/blog/">SpiderOak blog</a>.
+    </p>
   </div>
   <div class="s11">
     <h3>Who are the people behind Crypton?</h3>
     <p>
-    In 2007 we launched SpiderOak, the first ever online backup and file sync product with meaningful end user privacy assurance through built in encryption.  Since then a variety of excellent companies have followed us into this market.
+    In 2007 we launched SpiderOak, 
+    the first ever online backup and file sync product 
+    with meaningful end user privacy assurance through built in encryption.  
+    Since then a variety of excellent companies have followed us into this market.
     </p>
     <p>
     Now consumers demand more than just file storage and file sharing.
     </p>
     <p>
-    We expect apps with rich collaboration features that allow data coordination and sharing between organically forming and organizing groups.  It's not just about files and folders anymore, but about rich structured user data for a variety of domain specific purposes.
+    We anticpate the emergence of zero knowledge apps 
+    with rich collaboration features that allow data coordination 
+    and sharing between organically forming and organizing groups.  
+    It's not just about files and folders anymore, but about 
+    rich structured user data for a variety of domain specific purposes.
     </p>
     <p>
-    We love using and creating cloud applications, and we'd prefer not to to wait another 5 years for awareness to progress among developers and meaningful privacy to be a standard feature in cloud apps.
+    We love using and building cloud applications, 
+    and we'd prefer not to to wait another 5 years for awareness to increase 
+    and meaningful privacy to be a standard feature in cloud apps.
     </p>
     <p>
-    We're making this framework available to everyone, building our own next generation of apps on top of it, and looking forward to using the rich ecosystem of privacy preserving cloud apps to come.
+    We're making this framework available to everyone, 
+    building our own next generation of apps on top of it, 
+    and looking forward to the rich ecosystem of 
+    privacy preserving cloud apps to come.
     </p>
   </div>
   <div class="s12">
     <h3>Is Crypton Horizontally Scalable for a very large, high performance site with hundreds of millions of users?</h3>
     <p>
-    Yes, and far easily than a site built with traditional approaches to data storage.
+    Yes, and far easily than a site built with traditional approaches 
+    to data storage such as a relational database.
     </p>
     <p>
-    The backend data structures are designed for sharding as a site grows beyond the capabilities of a single cluster of database servers.  This means the process of building a very large Crypton app isn't about "scaling it to support 100 million users."  It's more like: "scale it to support 1 million users" and then repeat that 100 times.  Scaling out rather than up -- a far easier challenge.
+    The backend data structures are designed for sharding 
+    as a site grows beyond the capabilities of a single cluster 
+    of database servers.  
+    This means the process of building a very large Crypton app server 
+    isn't about "scaling it to support 100 million users."  
+    It's more like: "scale it to support 1 million users" 
+    and then repeat that 100 times.  
+    Scaling out rather than up -- a far easier challenge.
     </p>
     <p>
-    The nature of client side rather than server side intelligence naturally means that the server never has to perform joins between containers.  The server infrastructure gets out of the business of doing calculations on data.  Its job is just to reliably store and retrieve data while enforcing access policies and protocols.
+    The nature of client side rather than server side intelligence 
+    naturally means that the server never has to perform joins between 
+    containers.  
+    The server infrastructure gets out of the business of doing 
+    calculations on data.  
+    Its job is just to reliably store and retrieve data while enforcing 
+    quotas, access policies, and protocols.
     </p>
   </div>
   <div class="s13">
-    <h3>How do the challenges of developing a Crypton powered app compare to a similar app that did not preserve end user privacy?</h3>
-    <h3>How is Crypton's reference implementation built?</h3>
+    <h3>How do the challenges of developing a Crypton powered app 
+    compare to a similar app that did not preserve end user privacy?</h3>
     <p>
-    Crypto code is hard.  What code review and auditing has the cryptography in Crypton's specification and implementations received?  How will this continue moving forward?
+    In some ways, this can be generalized to another question better examined
+    by computer science: how do the challenges of building an application 
+    with a relational database compare to using an object database?
     </p>
     <p>
-    Crypto code is isolated into particular designated modules of the framework.  SpiderOak senior engineers will do review of all changes to those modules before each major and minor release.
-    </p>
-    <p>
-    SpiderOak will purchase expert code review from outside security specialists before each major release that involves changes to the crypto code.  The crypto portions of the code won't typically change between minor versions. 
-    </p>
-    <p>
-    This is sustainable.  Over time, the majority of the framework's code base won't be the crypto code itself, but rather database features and other higher level functionality built on top of the crypto layer.
+    TODO
     </p>
   </div>
+  <div class="s13">
+    <h3>How is Crypton's reference implementation built?</h3>
+    <p>TODO</p>
+  </div>
+  <div class="s13">
+    <h3>What code review and auditing has the cryptography in Crypton's specification and implementations received?  How will this continue moving forward?</h3>
+    <p>
+    Crypto code is isolated into particular designated modules of the
+    framework.  SpiderOak senior engineers will do review of all changes to
+    those modules before each major and minor release beyond version 0.1.0.
+    (We're currently at version 0.0.1, and so no such review has yet happened,
+    but see below for the development timeline and other details.)
+    </p>
+    <p>
+    Additionally, SpiderOak will purchase expert code review 
+    from outside security specialists before each major release 
+    that involves changes to the crypto code.  
+    The crypto portions of the code won't typically change between minor versions.
+    </p>
+    <p>
+    This is sustainable.  Over time, the majority of the framework's 
+    code base won't be the crypto code itself, 
+    but rather object database features 
+    and other higher level functionality built on top of the 
+    crypto storage layer.
+    </p>
+    <p>
+    Design spec for all of the crypto functionality needed by Crypton 
+    was completed before any development started.  
+    We expect feature creep to only very rarely extend the crypto requirements.
+    </p>
+  </div>
+
   <div class="s14">
-    <h3>What testing, code quality and development guidelines are in place to make the code accessible to reviewers and bug hunters?</h3>
+    <h3>What testing, code quality and development guidelines are in place to
+    make the code accessible to reviewers and bug hunters?</h3>
     <p>
-    Building software involves bugs, and bugs in crypto code are often fatal.  Research has shown that a variety of quality control tools are effective at finding different types of bugs, and consequently the combination of several techniques is most likely to lead to reliable software.  Among these, human code review is probably the most important.
+    Building software involves bugs, and bugs in crypto code are often fatal.
+    Research has shown that a variety of quality control tools are effective 
+    at finding different types of bugs, and consequently the combination of 
+    several techniques is most likely to lead to reliable software.  
+    Among these, human code review is the most important.
     </p>
     <p>
-    Crypton is written with human review and testability in mind.  This means: consistent style, single purpose, simple functions, clear code separation, meaningful function and variable names, and careful code organization.  Data structures are specified independently of the code that implements them.
+    Crypton is written with human review and testability in mind.  
+    This means consistent style, simple single purpose functions, 
+    clear code separation, avoiding unnecessary coupling, 
+    meaningful function and variable names, 
+    and careful code organization.  
+    Data structures are designed and specified independently of the code.
     </p>
+
     <p>
     Additionally, Crypton uses all of the following:
     </p>
 
     <ul>
       <li>Static Analysis
-        <p>All of the Crypton code created by us passes jshint with a custom configuration that's fairly strict and disallows most of the problematic areas of JS.</p>
-      </li>
-      <li>Standard Style Guide w/ Code Complexity Controls</li>
+      <li>Standard Style Guide with Code Complexity Controls</li>
       <li>Unit Tests</li>
-      <li>
-        Integration Tests
-        <li>PhantomJS and Node Integration</li>
-      </li>
+      <li>Integration Tests
       <li>Continuous Integration</li>
       <li>Code Review</li>
-      <li>Intentional End User QA by trained UI breakers</li>
+      <li>Careful QA Testing by high entropy humans</li>
     </ul>
   </div>
   <div class="s15">
     <h3>What software license(s) is the Crypton implementation available under?</h3>
-    <p>AGPLv3</p>
-    <p>Commercial License</p>
-    <p>Early commercial products involving Crypton may receive complimentary commercial licenses.  Contact us.  We have a history of making reasonable arrangements for startups.</p>
-    <p>Many people will say we should make Crypton available under a more liberal license that AGPLv3.  There are substantial external costs to making Crypton available, such as periodic code review by expert cryptographers, that the commercial licensing fees are intended to offset.</p>
+
+    <p>
+    A client SDK is available under the LGPL license.  This is suitable for
+    including SpiderOak hosted Crypton.IO storage options within another
+    application.  This is similar to using the Dropbox API to store data within
+    end users' Dropbox accounts.  
+    </p>
+    
+    <p>
+    There are additional options if you want to build a zero knowledge
+    application that is entirely self hosted.  In other words, it does not have
+    any dependency on users having SpiderOak.com accounts.  Rather, you want to
+    operate the server side components of Cryton.io yourself, letting clients
+    connect to your own infrastructure.
+    </p>
+
+    <p>
+    For this, there are two choices.  If your online service is also free and
+    open source software like Crypton itself, then you may freely make use
+    of full Cryton code base including all client and server components
+    under the terms of the AGPL.  If making your product free and open source
+    software is unpalatable, you may instead purchase a commercial license from
+    SpiderOak.
+    </p>
+
+    <p>
+    Many people will say we should make Crypton available under a more liberal
+    license than AGPLv3.
+    Essentially, these people ask for the freedom to build closed source
+    commercial online services with Crypton without contributing their own
+    improvements back to the community and without financially supporting the
+    cost of ongoing maintenance, development, and security review of Crypton.
+    </p>
+
+    <p>
+    Such uses are more appropriate under a commercial license.  
+    Early adopters may receive complimentary licenses.  
+    Contact us.  
+    We have a history of making reasonable arrangements for startups.
+    </p>
   </div>
   <div class="s16">
     <h3>How far along is the reference implementation in the development cycle?</h3>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+
     <h3>What additional capabilities and enhancements will be added as the project matures?</h3>
     <ul>
       <li>Client: Native Browser Plugins for the slow and sensitive crypto ops</li>
