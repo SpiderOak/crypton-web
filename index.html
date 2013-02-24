@@ -8,20 +8,21 @@
 <body>
   <div class="s1">
     <p><img src="crypton.png" alt="Crypton" /></p>
-    <a id="github" href="https://github.com/SpiderOak/crypton/">View on Github</a>
+    <a id="github" href="https://github.com/SpiderOak/crypton/">View on GitHub</a>
   </div>
   <!-- Please follow semantic linefeeds in the text.
        http://rhodesmill.org/brandon/2012/one-sentence-per-line/ -->
   <div class="s2">
     <h3>What is Crypton?</h3>
     <p>
-    Crypton is a framework for building cryptographically secure cloud applications.  
-    Such applications offer meaningful privacy assurance to end users because 
+    Crypton is a framework for building 
+    cryptographically secure cloud applications.
+    Such applications offer meaningful privacy assurance to end users because
     the servers running the application cannot read the data 
     created and stored by the application.
     </p>
     <p>
-    Using Crypton, developers can for the first time easily build featureful,
+    Using Crypton, developers can for the first time easily build feature rich
     multi user collaborative applications that offer total privacy and security
     "out of the box." 
     Crypton transparently does all the hard parts of cryptography behind the scenes.  
@@ -31,7 +32,7 @@
   <div class="s3">
     <h3>How does this change the landscape?</h3>
     <p>
-    Users will no longer have to chose between the convienience of 
+    Users will no longer have to chose between the convenience of 
     the cloud applications and protecting their privacy.
     </p>
     <p>
@@ -76,7 +77,7 @@
     <h3>Has this been done before?</h3>
     <p>
     To our knowledge there is no existing framework that handles all the 
-    encyrption, database storage, and private user to user communication 
+    encryption, database storage, and private user to user communication 
     needed to build a zero knowledge cloud application.
     </p>
     <p>
@@ -169,11 +170,11 @@
     a collaborative time and project management application, 
     would be a good candidate.  
     Basecamp is an interface for organizing TODOs, tracking your time, 
-    collecting documents, assets, timelines, calendars, and general 
+    collecting documents, assets, time lines, calendars, and general 
     communication among a group of people working on a specific project.  
     All of the "data" that goes into the application is provided by the users.
-    The software itself is generic 
-    &mdash; it can work with any combination of documents, calendar events, 
+    The software itself is generic&mdash;it 
+    can work with any combination of documents, calendar events, 
     and so on.</p>
     
     <p>Most importantly, the servers' administrator don't profit from seeing this data,
@@ -279,7 +280,7 @@
     Now consumers demand more than just file storage and file sharing.
     </p>
     <p>
-    We anticpate the emergence of zero knowledge apps 
+    We anticipate the emergence of zero knowledge apps 
     with rich collaboration features that allow data coordination 
     and sharing between organically forming and organizing groups.  
     It's not just about files and folders anymore, but about 
@@ -300,7 +301,7 @@
   <div class="s12">
     <h3>Is Crypton Horizontally Scalable for a very large, high performance site with hundreds of millions of users?</h3>
     <p>
-    Yes, and far easily than a site built with traditional approaches 
+    Yes, and more easily than a site built with traditional approaches 
     to data storage such as a relational database.
     </p>
     <p>
@@ -309,9 +310,9 @@
     of database servers.  
     This means the process of building a very large Crypton app server 
     isn't about "scaling it to support 100 million users."  
-    It's more like: "scale it to support 1 million users" 
+    It's more like: "scale it to support 1 million users," 
     and then repeat that 100 times.  
-    Scaling out rather than up -- a far easier challenge.
+    Scaling out rather than up&mdash;a far easier challenge.
     </p>
     <p>
     The nature of client side rather than server side intelligence 
@@ -340,19 +341,24 @@
     <p>TODO</p>
   </div>
   <div class="s13">
-    <h3>What code review and auditing has the cryptography in Crypton's specification and implementations received?  How will this continue moving forward?</h3>
+    <h3>
+    What code review and auditing has the cryptography 
+    in Crypton's specification and implementations received?  
+    How will this continue moving forward?
+    </h3>
     <p>
-    Crypto code is isolated into particular designated modules of the
-    framework.  SpiderOak senior engineers will do review of all changes to
-    those modules before each major and minor release beyond version 0.1.0.
-    (We're currently at version 0.0.1, and so no such review has yet happened,
+    Crypto code is isolated into particular designated modules.  
+    SpiderOak senior engineers will do review of all changes to
+    those modules before each major and minor release beyond v0.1.0.
+    (We're currently at version 0.0.1 and so no such review has yet happened,
     but see below for the development timeline and other details.)
     </p>
     <p>
     Additionally, SpiderOak will purchase expert code review 
     from outside security specialists before each major release 
     that involves changes to the crypto code.  
-    The crypto portions of the code won't typically change between minor versions.
+    The crypto portions of the code won't typically change between 
+    minor versions.
     </p>
     <p>
     This is sustainable.  Over time, the majority of the framework's 
@@ -433,15 +439,23 @@
     license than AGPLv3.
     Essentially, these people ask for the freedom to build closed source
     commercial online services with Crypton without contributing their own
-    improvements back to the community and without financially supporting the
+    improvements back to the community, 
+    without giving credit to the community's efforts, 
+    and without financially supporting the
     cost of ongoing maintenance, development, and security review of Crypton.
     </p>
 
     <p>
     Such uses are more appropriate under a commercial license.  
-    Early adopters may receive complimentary licenses.  
+    Early adopters may receive complimentary commercial licenses.  
     Contact us.  
     We have a history of making reasonable arrangements for startups.
+    </p>
+
+    <p>We also enjoy Zed Shaw's 
+    <a href="http://zedshaw.com/essays/why_i_gpl.html">
+    explanation of why he choses GPL
+    </a>, and his forth reason in particular.
     </p>
   </div>
   <div class="s16">
@@ -457,17 +471,27 @@
 
     <h3>What additional capabilities and enhancements will be added as the project matures?</h3>
     <ul>
-      <li>Client: Native Browser Plugins for the slow and sensitive crypto ops</li>
+      <li>Client: Object DB: Efficient storage of BLOBs, 
+      for easier storing of music, pictures, video, etc.</li>
+      <li>Client: Object DB: Improved diff and patch implementations 
+      for container saves, loads, and refreshes/updates.</li>
+      <li>Client: Object DB: transparent and opportunistic compression</li>
       <li>Backend: Application level data partitioning</li>
-      <li>Websocket and long polling support, for realtime notifications for changes</li>
-      <li>Backend: Faster implementation of realtime transient messaging</li>
-      <li>Backend: Support for pluggable external binary storage: Nimbus.io, Amazon S3, etc.</li>
-      <li>Object DB: Pluggable User Created Adapters and Differs of more complex data structures, allowing faster container refresh and smaller data storage.</li>
-      <li>Object DB: More Standard Adapters and Differs</li>
-      <li>Object DB: Container Triggers: Automatically run code on every save.  For example, automatically maintain a searchable index by keyword in separate container(s)</li>
-      <li>Object DB: Container Compaction</li>
-      <li>Object DB: More aggressive container caching for faster application load times and interactivity.</li>
-      <li>Object DB: Specialized containers that implement more efficient maps for strings and large integers.</li>
+      <li>Websocket and long polling support, for real time notifications for changes</li>
+      <li>Backend: Faster implementation of real time transient messaging</li>
+      <li>Backend: Support for pluggable external binary storage: 
+      Nimbus.io, Amazon S3, filesystem, etc.</li>
+      <li>Client: Object DB: Pluggable User Created Adapters and Differs of more complex data structures, allowing faster container refresh and smaller data storage.</li>
+      <li>Client: Object DB: More Standard Adapters and Differs</li>
+      <li>Client: Object DB: Container Triggers: Automatically run code on every save.  For example, automatically maintain a searchable index by keyword in separate container(s)</li>
+      <li>Client: Object DB: Container Compaction</li>
+      <li>Client: Object DB: More aggressive container caching for faster 
+      application load times and interactivity.</li>
+      <li>Client: Object DB: Specialized containers that implement more efficient maps 
+      for strings and large integers.</li>
+      <li>Client: Native browser plugins for the slow and sensitive crypto ops</li>
+      <li>Client: Reference implementations in other languages such as 
+      Python, Objective C, and Java.</li>
     </ul>
   </div>
   <div class="s17">
@@ -481,27 +505,39 @@
   <div class="s18">
     <h3>What are some examples other relevant crypto projects?</h3>
     <p>
-https://silentcircle.com/
-http://aes.io/
-http://mega.co.nz/
-https://crypto.cat/
-https://spideroak.com/
+    <ul>
+      <li>https://silentcircle.com/</li>
+      <li>http://aes.io/</li>
+      <li>http://mega.co.nz/</li>
+      <li>https://crypto.cat/</li>
+      <li>https://spideroak.com/</li>
+    </ul>
     </p>
   </div>
   <div class="s19">
     <h3>What commercial products are implemented with crypton?</h3>
     <p>
-    None yet since we haven't even released a 1.0.0 version of the framework, but we'll be sure to showcase them here when they happen.  We're obviously building our own apps with it too!
+    Hopefully none yet, since we haven't released a security reviewed 
+    v0.1.0 version of the framework, but that will happen soon.
+    We'll be sure to showcase Crypton products here.
+    We're naturally building our own apps with it too!
     </p>
   </div>
   <div class="s20">
-    <h3>ZOMG I've found a serious bug with security implications!1!  What are the security contact procedures?</h3>
+    <h3>ZOMG I've found a serious bug with security implications!!!1!  
+        What are the security contact procedures?</h3>
     <p>
-    Congrats and nice work!  Until we hit the 1.0.0 release milestone, just post it to GitHub as an issue like any other bug.
+    Congrats and nice work!  
+    Until we hit the v0.1.0 release milestone, 
+    just post it to GitHub as an issue like any other bug.
     </p>
+
     <p>
-    After that, we'll create proper security contact procedures, a GPG key, a core security team, etc.  We'll also be doing our own internal review before releasing 1.0.0.
+    When we release v0.1.0 we'll also create security contact procedures: 
+    a GPG key, a core security team, guaranteed response times, etc.  
+    We'll also be doing our own internal review before releasing v0.1.0.
     </p>
+
   </div>
 </body>
 </html>
