@@ -43,23 +43,21 @@
     Today there are few choices for effectively encrypted cloud storage.  There
     are even fewer choices for feature rich and collaborative encrypted cloud
     apps.  In the future there will be applications like Evernote, Basecamp,
-    Freshbooks, and Google Docs and many others with meaningful guarantees
+    Freshbooks, Google Docs and many others with meaningful guarantees
     about your privacy.
-    </p>
-    <p>
-    Crypton allows developers to provide customers a truly private storage
-    and collaboration environment with no access to customer data, without
-    having to rely on 3rd party security layers or post development hacks.
     </p>
   </div>
   </div>
   <div class="s"><div>
     <h3>Who is it for?</h3>
     <p>
-    Crypton is the perfect fit for any developer wishing to provide end to end
-    security and privacy without the hassle of securing a inherently open
-    environment such as the Dropbox API or Amazon right. With Crypton everything is
-    meaningfully encrypted from day one.
+    Crypton is for developers who want to build privacy into their apps.
+    </p>
+    <p>
+    Crypton allows developers to provide customers a truly private storage
+    and collaboration environment with no access to unencrypted customer data,
+    without having to rely on 3rd party security layers or post development
+    hacks.
     </p>
   </div>
   <div class="img"></div>
@@ -189,7 +187,7 @@
     collecting documents, assets, time lines, calendars, and general 
     communication among a group of people working on a specific project.  
     All of the "data" that goes into the application is provided by the users.
-    The software itself is generic&mdash;it 
+    The software itself is data generic&mdash;it 
     can work with any combination of documents, calendar events, 
     and so on.</p>
     
@@ -532,15 +530,39 @@
   </div>
   </div>
   <div class="s"><div>
-    <h3>How far along is the reference implementation in the development cycle?</h3>
+    <h3>
+    How far along is the reference implementation in the development cycle?
+    </h3>
 
     <p>
+    On 25 February 2013 we're releasing v0.0.1.
+    That is a proof of the core concepts.  
+    It includes the complete specification 
+    for all anticipated crypto functionality. 
     </p>
+
     <p>
+    The implementation of the object database is naive
+    with the simplest possible diff/patch implementation for updates.
+    BLOB storage is not space efficient.  
+    Automatic detection of changed objects is CPU and memory intensive.
     </p>
+
     <p>
+    New account key generation is particularly slow, 
+    and several other places need performance tuning.
     </p>
+
     <p>
+    Most importantly, it has not been through a first round of refactoring, 
+    general code cleanup, and security review.  It does not have comprehensive test
+    coverage.
+    </p>
+
+    <p>
+    All of these things will change in the versions between v0.0.1 and v0.1.0, 
+    at which point we'll make a first stable release 
+    that we encourage for production and commercial uses.
     </p>
 
     <h3>What additional capabilities and enhancements will be added as the project grows?</h3>
@@ -566,6 +588,7 @@
       <li>Client: Native browser plugins for the slow and sensitive crypto ops</li>
       <li>Client: Reference implementations in other languages such as 
       Python, Objective C, and Java.</li>
+      <li>Enhanced Mode Self Stabilizing Low Emissions Pony</li>
     </ul>
   </div>
   <div class="img"><img src="images/bells.jpg" alt="Literally bells and whistles" /></div>
