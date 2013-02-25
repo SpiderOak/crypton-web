@@ -97,78 +97,6 @@
   <div class="img"></div>
   </div>
   <div class="s">
-  <div class="img"><img src="images/collab.jpg" alt="A lab full of scientists in various emotional stages" /></div>
-  <div>
-    <h3>Should this be happening at all?  Isn't this a bad idea, fraught with peril?  Crypto code is hard and Javascript Crypto is doomed!</h3>
-    <p>
-    Building Crypto code is indeed 
-    <a href="http://chargen.matasano.com/chargen/2009/7/22/if-youre-typing-the-letters-a-e-s-into-your-code-youre-doing.html">
-    famously hard</a>.
-    We have some experience with cryptography, and most importantly 
-    we have an understanding that it needs auditing and verification by experts, 
-    and a development process that lends itself to this review.
-    </p>
-
-    <p>
-    It's better that the hard crypto code happens here 
-    in a centralized and general purpose application framework 
-    as an open source project where we can all work together,
-    rather than requiring developers to either write their own crypto code, 
-    or just avoid building applications 
-    with meaningful end user privacy assurance.
-    </p>
-
-    <p>
-    When building an application with Crypton, the cryptography is entirely 
-    encapsulated and hidden.  
-    You're just using a simple interface to data storage.
-    </p>
-
-    <p>
-    There are additional
-    <a href="http://www.matasano.com/articles/javascript-cryptography/">
-    concerns</a>
-    and
-    <a href="http://log.nadim.cc/?p=33">
-    arguments</a>
-    about "Browser based" crypto.  
-    </p>
-
-    <p>
-    First, we need to be clear that Javascript and "browser based" 
-    are not always the same thing.  
-    Javascript code might be a HTML5 mobile app running on Android, 
-    or a Node.js based desktop app created with something like 
-    <a href="http://appjs.org/">AppJS</a>.
-    Each of these scenarios are ideal environments for deploying Crypton 
-    applications and sidestep the objections to the browser environment.
-    </p>
-
-    <p>
-    For browser based applications there are some mitigations available.
-    Chrome and Safari include a <a href="https://developer.mozilla.org/en-US/docs/DOM/window.crypto.getRandomValues">
-    native secure random number generator</a>.
-    Firefox is 
-    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322529">
-    working on it</a>. 
-    We'll do what we can to avoid data exposure through side channels, 
-    such as using web workers where possible to avoid leaking timing 
-    information into the event loop.
-    </p>
-
-    <p>
-    Finally, remember the threat model we're protecting against.  
-    Specifically we're protecting the service operators from the dangers 
-    of having readable database of end user data.  
-    Simultaneously, we're protecting the end user from a service provider 
-    amassing a collection of the user's history and data.
-    Most of the arguments against browser based crypto 
-    don't directly apply to these goals.
-    </p>
-  </div>
-  <div class="img"></div>
-  </div>
-  <div class="s">
     <div class="img"><img src="images/creative.jpg" alt="A camera, paint, and edited paper" /></div>
   <div>
     <h3>What types of applications should be built with Crypton?</h3>
@@ -634,6 +562,81 @@
     We're naturally building our own apps with it too!
     </p>
   </div>
+  </div>
+  <div class="s">
+  <div class="img"><img src="images/collab.jpg" alt="A lab full of scientists in various emotional stages" /></div>
+  <div>
+    <h3>Should this be happening at all?  Isn't this a bad idea, fraught with peril?  Crypto code is hard and Javascript Crypto is doomed!</h3>
+    <p>
+    Building Crypto code is indeed 
+    <a href="http://chargen.matasano.com/chargen/2009/7/22/if-youre-typing-the-letters-a-e-s-into-your-code-youre-doing.html">
+    famously hard</a>.
+    We have some experience with cryptography, and most importantly 
+    we have an understanding that it needs auditing and verification by experts, 
+    and a development process that lends itself to this review.
+    </p>
+
+    <p>
+    It's better that the hard crypto code happens here 
+    in a centralized and general purpose application framework 
+    as an open source project where we can all work together.
+    The alternative is requiring developers to either write their own crypto code,
+    or just avoid building applications 
+    with meaningful end user privacy assurance.
+    </p>
+
+    <p>
+    When building an application with Crypton, the cryptography is entirely 
+    encapsulated and hidden.  
+    You're just using a simple interface to data storage.
+    </p>
+
+    <p>
+    There are additional
+    <a href="http://www.matasano.com/articles/javascript-cryptography/">
+    concerns
+    </a>
+    and
+    <a href="http://log.nadim.cc/?p=33">
+    arguments
+    </a>
+    about "Browser based" crypto.  
+    </p>
+
+    <p>
+    First, we need to be clear that Javascript and "browser based" 
+    are not always the same thing.  
+    Javascript code might be a HTML5 mobile app running on Android, 
+    or a Node.js based desktop app created with something like 
+    <a href="http://appjs.org/">AppJS</a>.
+    Each of these scenarios are ideal environments for deploying Crypton 
+    applications and sidestep the objections to the browser environment.
+    </p>
+
+    <p>
+    For browser based applications there are some mitigations available.
+    Chrome and Safari include a 
+    <a href="https://developer.mozilla.org/en-US/docs/DOM/window.crypto.getRandomValues">
+    native secure random number generator</a>.
+    Firefox is 
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322529">
+    working on it</a>. 
+    We'll do what we can to avoid data exposure through side channels, 
+    such as using web workers where possible to avoid leaking timing 
+    information into the event loop.
+    </p>
+
+    <p>
+    Finally, remember the threat model we're protecting against.  
+    Specifically we're protecting the service operators from the dangers 
+    of having readable database of end user data.  
+    Simultaneously, we're protecting the end user from a service provider 
+    amassing a collection of the user's history and data.
+    Most of the arguments against browser based crypto 
+    don't directly apply to these goals.
+    </p>
+  </div>
+  <div class="img"></div>
   </div>
   <div class="s"><div>
     <h3>ZOMG I've found a serious bug with security implications!one!!!  
