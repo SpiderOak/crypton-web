@@ -9,9 +9,8 @@
     <body>
       <header>
         <img src="crypton.png" alt="Crypton" />
-        <a id="github" href="https://github.com/SpiderOak/crypton/">View on Github</a>
 
-        <div style="float:right; font-size:smaller; margin: 20px;">
+        <div style="float:right; font-size:smaller; margin: 20px; margin-right:80px;">
             <a style="color:#fefefe;" href="http://twitter.com/spideroak">@spideroak</a><br/>
             <a style="color:#fefefe;" href="http://twitter.com/crypton.io">@crypton.io</a><br>
             <a style="color:#fefefe;" href="https://spideroak.com/blog/">SpiderOak blog</a>
@@ -154,25 +153,6 @@
                     and so on.
                 </p>
 
-                <p>Most importantly, the servers' administrator don't profit from seeing this data,
-                    and even get into trouble 
-                    <a href="http://37signals.com/svn/posts/3078-trust-is-fragile">when looking at it</a>!
-                </p>
-
-                <p>
-                    Many applications will have a mix of content 
-                    created by users and data supplied by the server. 
-                    They may use Crypton for the sensitive stuff 
-                    and traditional database storage for public data.
-
-                    For example, a site like 
-                    <a href="http://reddit.com/">Reddit</a>
-                    might only use Crypton for only a few features, 
-                    such as the private messaging system 
-                    where users send messages directly from one account to another, 
-                    or a user's own list of saved posts and comments.
-                </p>
-
                 <p>
                     In general, you can think of the most successful applications 
                     across many categories, and ask yourself if the market has room 
@@ -199,7 +179,7 @@
                     All the "data" in the system is essentially data created by the server 
                     &mdash; the directory of products and movies and shows available, 
                     and the browsing history of individual users.  
-    
+
                     The server necessarily knows which movies each user watches on Netflix, 
                     and which products they buy on Amazon.  
 
@@ -247,6 +227,7 @@
             </div>
         </div>
     </div>
+
     <div class="quest">
         <h1>Who are the people behind Crypton?</h1>
         <div class="qbod">
@@ -284,8 +265,9 @@
             </div>
         </div>
     </div>
+
     <div class="quest">
-        <h1>Is Crypton horizontally scalable for a very large, high performance site with hundreds of millions of users?</h1>
+        <h1>Is Crypton Horizontally Scalable for a very large, high performance site with hundreds of millions of users?</h1>
         <div class="qbod">
             <div class="qside">
             </div>
@@ -302,7 +284,7 @@
                     isn't about "scaling it to support 100 million users."  
                     It's more like: "scale it to support 1 million users," 
                     and then repeat that 100 times.  
-                    Scaling out rather than up&mdash;a far easier challenge.
+                    Scaling out rather than up&emdash;a far easier challenge.
                 </p>
                 <p>
                     The nature of client side rather than server side intelligence 
@@ -316,26 +298,97 @@
             </div>
         </div>
     </div>
+
+    <div class="quest">
+        <h1>How do the challenges of developing a Crypton powered app 
+    compare to a similar app that did not preserve end user privacy?</h1>
+        <div class="qbod">
+            <div class="qside">
+            </div>
+            <div class="qtext">
+                <p>
+                    Cryton can be used in conjunction with familiar approaches to application
+                    development such as Ruby on Rails, Python and Django, or PHP, Objective C,
+                    or Java.  
+                    Since the server cannot read the data, the
+                    data processing intelligence is client side.
+                    For a browser based application, much of the logic would 
+                    be written in Javascript.  
+                </p>
+
+                <p>
+                    The big structural difference is how private user generated data is stored.
+                    In a conventional application, you typically pass that information to the
+                    server so it can be stored in a relational database.  
+                    With Crypton, the private data is stored in an Object Database provided by
+                    the framework.
+                    Changes to the objects in the database are encrypted before being sent to
+                    the server.  The object database approach is convenient for quickly
+                    building rich client side applications, because you store the objects
+                    directly in their original form.
+                </p>
+
+                <p>
+                    We intend that Crypton will enable developers to build against Crypton
+                    much like a developer would build against any conventional object database.
+                    Such databases have been in existence since the early 1990's,
+                    and their operation is well documented and understood these days.
+                    Instead of having to worry about low-level implementation details,
+                    the developer targets Crypton as they would target another database technology.
+                </p>
+
+                <p>
+                    Crypton's object database implementation is inspired by 
+                    <a href="http://en.wikipedia.org/wiki/Zope_Object_Database">ZODB</a>.
+                    As Crypton progresses, the object database will gain advanced features, 
+                    such as object relationship validation, 
+                    automatically derived index objects,
+                    and triggers.
+                </p>
+
+                <p>
+                    Another topic is the added challenge of debugging.  
+                    Server operators can't just "look into an account" to see what's going wrong 
+                    in an application when an end user reports some problem.
+                    Instead they have to try to reproduce the problem independently,
+                    ask the user share the relevant data with the operators, 
+                    or build a diagnostic reporting capabilities into the application itself.
+                    This sort of problem solving takes some adjustment.  Such circumstances
+                    further increase the value of development methodologies for finding bugs
+                    before code reaches production.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="quest">
         <h1>How is Crypton's reference implementation built?</h1>
         <div class="qbod">
             <div class="qside">
             </div>
             <div class="qtext">
-                <p>Crypton's reference implementation uses 
-                    <a href="http://nodejs.org/">node.js</a> 
-                    and <a href="">PostgreSQL</a> on the backend.
+                <p>
+                    Crypton's reference implementation uses 
+                    <a href="http://nodejs.org/">Nodejs</a>, 
+                    <a href="http://redis.io/">Redis</a>
+                    and <a href="http://postgresql.org/">PostgreSQL</a> 
+                    on the backend.
                     The client is Javascript suitable for browser environment or app packaging.
+                </p>
+                <p>
+                    We'll soon make additional reference implementations of the client in
+                    Python and C.  
+                    The backend will evolve to a more sophisticated stack
+                    involving multiple languages and pluggable storage technologies.
                 </p>
             </div>
         </div>
     </div>
+
     <div class="quest">
-        <h1>
-            What code review and auditing has the cryptography 
+        <h1>What code review and auditing has the cryptography 
             in Crypton's specification and implementations received?  
-            How will this continue moving forward?
-        </h1>
+            How will this continue moving forward?</h1>
         <div class="qbod">
             <div class="qside">
             </div>
@@ -370,44 +423,9 @@
             </div>
         </div>
     </div>
-    <div class="quest">
-        <h1>How do the challenges of developing a Crypton powered app compare to a similar app that did not preserve end user privacy?</h1>
-        <div class="qbod">
-            <div class="qside"></div>
-            <div class="qtext">
-                <p>
-                    In some ways, this can be generalized to another question better examined
-                    by computer science: how do the challenges of building an application 
-                    with a relational database compare to using an object database?
-                </p>
-                <p>
-                    We intend that Crypton will enable developers to build against Crypton
-                    much like a developer would build against any conventional object database.
-                    Such databases have been in existence since the early 1990's,
-                    and their operation is documented and understood these days.
-                    Instead of having to worry about low-level implementation details,
-                    the developer targets Crypton as they would target another database technology.
-                </p>
-                <p>
-                    As Crypton advances, the object database will gain advanced features, 
-                    such as object relationship validation, 
-                    automatically derived index objects,
-                    and triggers.
-                </p>
-                <p>
-                    Another topic is the added challenge of debugging.  
-                    Server operators can't just "look into an account" to see what's going wrong 
-                    in an application when an end user reports some problem.
-                    Instead they have to try to reproduce the problem independently,
-                    ask the user share the relevant data with the operators, 
-                    or build a diagnostic reporting capabilities into the application itself.
-                    This sort of problem solving takes some adjustment.  Such circumstances
-                    further increase the value of development methodologies for finding bugs
-                    before code reaches production.
-                </p>
-            </div>
-        </div>
-    </div>
+
+
+ 
     <div class="quest">
         <h1>What testing, code quality and development guidelines are in place to make the code accessible to reviewers and bug hunters?</h1>
         <div class="qbod">
@@ -514,7 +532,7 @@
                     On 25 February 2013 we're releasing v0.0.1.
                     That is a proof of the core concepts.  
                     It includes the complete specification 
-                    for all anticipated crypto functionality. 
+                    for all anticipated crypto functionality and core data structures. 
                 </p>
 
                 <p>
@@ -540,6 +558,7 @@
                     at which point we'll make a first stable release 
                     that we encourage for production and commercial uses.
                 </p>
+
 
                 <h2>What additional capabilities and enhancements will be added as the project grows?</h2>
                 <h3>Client</h3>
@@ -585,6 +604,9 @@
                     along with the JavaScript reference implementation.
                 </p>
                 <h2>Is there a forum or something for developers building applications with the framework?</h2>
+                <p>
+                    We are providing a mailing list for now, and will also likely provide forums in the future.
+                </p>
                 <h2>I'm not a developer but this is cool. How can I help?</h2>
                 <ul>
                     <li>
