@@ -1,27 +1,11 @@
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
 body {
-  font: 20px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font: 20px 'SourceSansProRegular', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 
-header {
-  padding: 50px;
-}
-
-div {
-    padding: 0 50px;
-}
-
 header, div {
   opacity: 0.9;
-  line-height: 28px;
-  text-align: justify;
 }
 
 #github {
@@ -37,41 +21,61 @@ header, div {
 }
 
 header {
-  background: #0096d6;
+  padding: 50px;
+  background: #0054a6;
   color: #fff;
+  margin-bottom: 50px;
 }
 
-.s {
+footer {
+    margin-bottom: 20;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#main {
+    padding: 0 50px;
+    width: 70%;
+}
+
+.quest h1 {
+    font-family: SourceSansProBold;
+    font-weight: normal;
+    margin-left: 25px;
+    margin-bottom: 0;
+    line-height: 1.1em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.qbod {
     display: table;
+    width:100%;
 }
 
-.s > div, .s > img {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.s > div {
-    width: 66%;
-}
-
-.s > div.img {
+.qside {
     width: 33%;
-    padding: 0;
+    padding-right: 10px;
 }
 
-.img img {
+.qside img {
     width: 100%;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
-p {
+.qtext {
+    width: 66%;
+    text-align: justify;
+}
+
+.qbod > .qtext, .qbod > .qside {
+    display: table-cell;
 }
 
 a {
-  color: #0096d6;
+  color: #0054a6;
 }
 
-small {
+.small {
   opacity: 0.5;
   font-size: 14px;
 }
