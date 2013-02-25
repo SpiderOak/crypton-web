@@ -8,18 +8,6 @@ header, div {
   opacity: 0.9;
 }
 
-#github {
-  text-decoration: none;
-  padding: 10px 15px;
-  background-color: #fff;
-  font-size: 18px;
-  color: #2e3a47;
-  border-radius: 4px;
-  position: absolute;
-  left: 400px;
-  top: 82px;
-}
-
 header {
   padding: 50px;
   background: #0054a6;
