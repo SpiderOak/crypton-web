@@ -209,7 +209,7 @@
     <h3>How can I stay informed of updates?</h3>
     <p>Follow us on Twitter!</p>
     <ul>
-      <li><a href="http://twitter.com/spideroak">@spideroak</a></li>
+      <li><a href="http://twitter.com/spideroak">@SpiderOak</a></li>
       <li><a href="http://twitter.com/crypton.io">@crypton.io</a></li>
     </ul>
     <p>
@@ -286,24 +286,45 @@
     <h3>How do the challenges of developing a Crypton powered app 
     compare to a similar app that did not preserve end user privacy?</h3>
     <p>
-    In some ways, this can be generalized to another question better examined
-    by computer science: how do the challenges of building an application 
-    with a relational database compare to using an object database?
+    Cryton can be used in conjunction with familiar approaches to application
+    development such as Ruby on Rails, Python and Django, or PHP, Objective C,
+    or Java.  
+    Since the server cannot read the data, the
+    data processing intelligence is client side.
+    For a browser based application, much of the logic would 
+    be written in Javascript.  
     </p>
+
+    <p>
+    The big structural difference is how private user generated data is stored.
+    In a conventional application, you typically pass that information to the
+    server so it can be stored in a relational database.  
+    With Crypton, the private data is stored in an Object Database provided by
+    the framework.
+    Changes to the objects in the database are encrypted before being sent to
+    the server.  The object database approach is convenient for quickly
+    building rich client side applications, because you store the objects
+    directly in their original form.
+    </p>
+    
     <p>
     We intend that Crypton will enable developers to build against Crypton
     much like a developer would build against any conventional object database.
     Such databases have been in existence since the early 1990's,
-    and their operation is documented and understood these days.
+    and their operation is well documented and understood these days.
     Instead of having to worry about low-level implementation details,
     the developer targets Crypton as they would target another database technology.
     </p>
+
     <p>
-    As Crypton advances, the object database will gain advanced features, 
+    Crypton's object database implementation is inspired by 
+    <a href="http://en.wikipedia.org/wiki/Zope_Object_Database">ZODB</a>.
+    As Crypton progresses, the object database will gain advanced features, 
     such as object relationship validation, 
     automatically derived index objects,
     and triggers.
     </p>
+
     <p>
     Another topic is the added challenge of debugging.  
     Server operators can't just "look into an account" to see what's going wrong 
@@ -314,6 +335,7 @@
     This sort of problem solving takes some adjustment.  Such circumstances
     further increase the value of development methodologies for finding bugs
     before code reaches production.
+    </p>
   </div>
   <div class="img"></div>
   </div>
