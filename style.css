@@ -4,10 +4,6 @@ body {
   margin: 0;
 }
 
-header, div {
-  opacity: 0.9;
-}
-
 header {
   padding: 50px;
   background: #0054a6;
@@ -51,6 +47,7 @@ footer {
 }
 
 .qtext {
+    color:#666666;
     width: 66%;
     text-align: justify;
 }
