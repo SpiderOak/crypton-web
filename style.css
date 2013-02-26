@@ -68,3 +68,37 @@ a {
 .center {
   text-align: center;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  body {
+    font-size: 18px;
+  }
+
+  header img {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* remove once inline styles are removed */
+  header div,
+  header img:nth-child(2) {
+    display: none;
+  }
+
+  #main {
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .qbod > .qtext, .qbod > .qside {
+    display: block;
+    width: 100%;
+  }
+
+  .quest h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+}
