@@ -1,44 +1,84 @@
 body {
-  font: 20px 'SourceSansProRegular', Helvetica, Arial, sans-serif;
+  font: 18px 'HelveticaNeue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 
-header {
-  padding: 50px;
+#github img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 100;
+}
+
+#sidebar {
+  padding: 10px;
   background: #0054a6;
   color: #fff;
-  margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  left 0;
+  bottom: 0;
+  width: 250px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#sidebar img {
+  max-width: 100%;
+}
+
+#nav {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  -webkit-transition: all 0.1s ease;
+}
+
+#nav a:hover {
+  padding-left: 10px;
+}
+
+#content {
+  padding-left: 250px;
 }
 
 footer {
-    margin-bottom: 20;
-    text-align: center;
-    vertical-align: middle;
+  margin-bottom: 20;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #main {
-    padding: 0 50px;
-    width: 70%;
+  padding: 0 50px;
+}
+
+.quest {
+  clear: both;
 }
 
 .quest h1 {
-    font-family: SourceSansProBold;
-    font-weight: normal;
-    margin-left: 25px;
-    margin-bottom: 0;
-    line-height: 1.1em;
-    -webkit-font-smoothing: antialiased;
-}
-
-.qbod {
-    display: table;
-    width:100%;
+  font-family: SourceSansProBold;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
+  padding-top: 15px;
+  font-size: 26px;
 }
 
 .qside {
-    width: 33%;
-    padding-right: 10px;
+    width: 30%;
+    float: right;
+    padding-left: 20px;
+    display: inline-block;
 }
 
 .qside img {
@@ -47,13 +87,9 @@ footer {
 }
 
 .qtext {
-    color:#666666;
-    width: 66%;
+    color: #111;
     text-align: justify;
-}
-
-.qbod > .qtext, .qbod > .qside {
-    display: table-cell;
+    opacity: 0.85;
 }
 
 a {
@@ -61,10 +97,45 @@ a {
 }
 
 .small {
-  opacity: 0.5;
   font-size: 14px;
 }
 
 .center {
   text-align: center;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  #sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    width: 100%;
+    box-shadow: inset -5px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 0;
+  }
+
+  #sidebar img {
+    width: 75%;
+  }
+
+  #github img {
+    position: absolute;
+    width: 100px;
+  }
+
+  #content {
+    padding: 160px 0 0 0;
+  }
+
+  .qside {
+    display: none;
+  }
+
+  #main {
+    padding: 15px;
+  }
 }

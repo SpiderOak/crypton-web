@@ -2,40 +2,50 @@
 <html>
     <head>
         <meta charset=utf-8 />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
         <title>Crypton - a Zero Knowledge application framework</title>
         <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
         <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7154525-5']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackEvent']);
+        _gaq.push(['_trackSocial']);
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-7154525-5']);
-          _gaq.push(['_trackPageview']);
-          _gaq.push(['_trackEvent']);
-          _gaq.push(['_trackSocial']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
         </script>
     </head>
     <body>
-      <header>
-        <img src="crypton.png" alt="Crypton" />
+      <div id="sidebar">
+        <a href="/">
+          <img src="crypton.png" alt="Crypton" />
+        </a>
 
-        <img src="images/zero_knowledge_privacy_seal.png" style="float: right; margin-right: 96px;" />
-
-        <div style="float:right; font-size:smaller; margin: 20px 40px 20px 20px;">
-            <a style="color:#fefefe;" href="http://twitter.com/spideroak">@spideroak</a><br/>
-            <a style="color:#fefefe;" href="http://twitter.com/crypton_io">@crypton_io</a><br>
-            <a style="color:#fefefe;" href="https://spideroak.com/blog/">SpiderOak blog</a>
-        </div>
-        <div style="float:right; font-size:smaller; text-transform:uppercase; margin:20px;">
-            Stay Updated:</div>
-        <a href="https://github.com/SpiderOak/crypton" onClick="_gaq.push(['_trackEvent', 'sites_links', 'forkme', 'click'])"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-    </header>
+        <ul id="nav">
+            <li><a href="/">Overview</a></li>
+            <li><a href="/getting-started">Getting Started</a></li>
+            <li><a href="/developer-guide">Developer Guide</a></li>
+            <li><a></a></li>
+            <li><a href="https://spideroak.com/blog/">SpiderOak Blog</a></li>
+            <li><a href="https://twitter.com/spideroak">@spideroak</a></li>
+            <li><a href="https://twitter.com/crypton_io">@crypton_io</a></li>
+            <li><h4>Documentation</h4></li>
+            <li><a href="/docs/sessions">Sessions</a></li>
+            <li><a href="/docs/containers">Containers</a></li>
+            <li><a href="/docs/transactions">Transactions</a></li>
+            <li><a href="/docs/messages">Messages</a></li>
+            <li><h4>Examples</h4></li>
+            <li><a href="https://diary.crypton.io/">Diary</a></li>
+            <li><a href="https://chat.crypton.io/">Chat</a></li>
+        </ul>
+    </div>
+    <div id="content">
+    <a href="https://github.com/SpiderOak/crypton" onClick="_gaq.push(['_trackEvent', 'sites_links', 'forkme', 'click'])" id="github"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
     <div id="main">
     <!-- Please follow semantic linefeeds in the text.
     http://rhodesmill.org/brandon/2012/one-sentence-per-line/ -->
@@ -777,7 +787,6 @@
     </div>
     </div>
     <footer>
-        <hr/>
         <p class="small">Crypton and this site are &copy;2013 <a href="https://spideroak.com">SpiderOak, Inc.</a></p>
         <p class="small">
             <a href="https://spideroak.com/community/">Social Media</a> • 
@@ -788,6 +797,8 @@
             <a href="https://spideroak.com/privacy_policy">Privacy Policy</a> •
             <a href="https://spideroak.com/terms_of_use">Terms of Use</a>
         </p>
+        <img src="images/zero_knowledge_privacy_seal.png" style="margin: 0 auto; padding: 15px;" />
     </footer>
+    </div>
     </body>
     </html>
