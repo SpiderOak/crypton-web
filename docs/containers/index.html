@@ -130,6 +130,7 @@ entries.save(function (err) {
                         <p>Let's add some more content to this entry. We'll store the text content separately from the metadata, in its own one-off container.</p>
                         <pre><code data-language="javascript">var text = 'Dear diary,\n\nToday, I transparently encrypted data with the RSA algorithm and it was dreamy.';
 var textContainerName = 'entry:' + id;
+
 session.create(textContainerName, function (err, textContainer) {
   textContainer.add('entry', function () {
     textContainer.get('entry', function (err, entry) {

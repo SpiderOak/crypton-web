@@ -50,34 +50,69 @@
     <a href="https://github.com/SpiderOak/crypton" onClick="_gaq.push(['_trackEvent', 'sites_links', 'forkme', 'click'])" id="github"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
 
     <div id="main">
-      <!-- Please follow semantic linefeeds in the text.
-      http://rhodesmill.org/brandon/2012/one-sentence-per-line/ -->
-      <div class="quest">
-          <h1>Getting Started</h1>
-          <div class="qbod">
-              <div class="qside">
-              </div>
-              <div class="qtext">
-                  <p>
-                      Crypton is a framework for building 
-                      cryptographically secure cloud applications.
-                      Such applications offer meaningful privacy assurance to end users because
-                      the servers running the application cannot read the data 
-                      created and stored by the application.
-                  </p>
-<pre><code data-language="shell"># install postgres
+        <!-- Please follow semantic linefeeds in the text.
+        http://rhodesmill.org/brandon/2012/one-sentence-per-line/ -->
+        <div class="quest">
+            <h1>Getting Started</h1>
+            <div class="qbod">
+                <div class="qside">
+                </div>
+                <div class="qtext">
+                    <p>
+                        Crypton is not yet ready for a production environment.
+                    </p>
+                    <p>
+                        The following will guide you through setting up a Crypton
+                        server for development. This guide assumes you are on Ubuntu,
+                        though this is not required.
+                    </p>
+                    <p><strong>Dependencies</strong></p>
+                    <p>
+                        The Crypton server depends on PostgreSQL and Node.js v0.8.x.
+                    </p>
+                    <pre><code data-language="shell"># install postgres
+sudo apt-get install postgresql
+
+# install git
+sudo apt-get install git-core
+
+# install node.js dependencies
+sudo apt-get install g++ curl libssl-dev apache2-utils
+
 # install node.js
-# generate a certificate
+git clone https://github.com/joyent/node
+cd node
+./configure
+make
+sudo make install
 
 # get crypton
-git clone crypton
+git clone https://github.com/SpiderOak/crypton.git
+
+# setup the database
 cd crypton/integration_tests
-make clean
-make setup
+make setup-test-environment
 </code></pre>
-              </div>
-          </div>
-      </div>
+                    <p><strong>Running the server</strong></p>
+                    <pre><code data-language="shell">cd crypton/server
+npm link
+which crypton # should be ./server.js
+NODE_ENV=test crypton
+</code></pre>
+                    <p>To clean the database (remove all data):</p>
+                    <pre><code data-language="shell">cd crypton/integration_tests
+make clean-test-db
+</code></pre>
+                    <p><strong>Client compilation</strong></p>
+                    <p>To generate the un- and minified versions of the client code:</p>
+                    <pre><code data-language="shell">cd crypton/client
+./compile.sh --once
+# crypton.js and crypton.min.js should now be in crypton/client/dist
+# if --once is left off, compile.sh recompile once a change in the client directory is detected
+</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
