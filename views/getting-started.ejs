@@ -1,0 +1,62 @@
+
+        <div class="quest">
+            <h1>Getting Started</h1>
+            <div class="qbod">
+                <div class="qside">
+                </div>
+                <div class="qtext">
+                    <p>
+                        Crypton is not yet ready for a production environment.
+                    </p>
+                    <p>
+                        The following will guide you through setting up a Crypton
+                        server for development. This guide assumes you are on Ubuntu,
+                        though this is not required.
+                    </p>
+                    <p><strong>Dependencies</strong></p>
+                    <p>
+                        The Crypton server depends on PostgreSQL and Node.js v0.8.x.
+                    </p>
+                    <pre><code data-language="shell"># install postgres
+sudo apt-get install postgresql
+
+# install git
+sudo apt-get install git-core
+
+# install node.js dependencies
+sudo apt-get install g++ curl libssl-dev apache2-utils
+
+# install node.js
+git clone https://github.com/joyent/node
+cd node
+./configure
+make
+sudo make install
+
+# get crypton
+git clone https://github.com/SpiderOak/crypton.git
+
+# setup the database
+cd crypton/integration_tests
+make setup-test-environment
+</code></pre>
+                    <p><strong>Running the server</strong></p>
+                    <pre><code data-language="shell">cd crypton/server
+npm link
+which crypton # should be ./server.js
+NODE_ENV=test crypton
+</code></pre>
+                    <p>To clean the database (remove all data):</p>
+                    <pre><code data-language="shell">cd crypton/integration_tests
+make clean-test-db
+</code></pre>
+                    <p><strong>Client compilation</strong></p>
+                    <p>To generate the un- and minified versions of the client code:</p>
+                    <pre><code data-language="shell">cd crypton/client
+./compile.sh --once
+# crypton.js and crypton.min.js should now be in crypton/client/dist
+# if --once is left off, compile.sh recompile once a change in the client directory is detected
+</code></pre>
+                </div>
+            </div>
+        </div>

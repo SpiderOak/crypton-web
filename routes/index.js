@@ -1,8 +1,8 @@
+var fs = require('fs');
+var files = fs.readdirSync(__dirname);
 
-/*
- * GET home page.
- */
+files.splice(files.indexOf('index.js'), 1); // remove index.js
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+for (var i in files) {
+  require('./' + files[i]);
+}
