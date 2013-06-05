@@ -1,29 +1,30 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/github.css" />
 <script src="/javascripts/rainbow.min.js"></script>
 
-            <div class="quest">
-                <h1>Accounts</h1>
-                <div class="qbod">
-                    <div class="qside">
-                    </div>
-                    <div class="qtext">
-                        <p>Each user of a Crypton app must have an account. </p>
-                        <p><strong>crypton.generateAccount(username, passPhrase, step, done)</strong></p>
-                        <p>This method will generate an account object with salts and keys. The <code>step</code> function is called frequently
-                            to indicate progress. The <code>done</code> function is called upon completion, passing potentially null error and account arguments.</p>
-                        <pre><code data-language="javascript">var username = 'inputFromUser';
+<div class="quest">
+  <h1>Accounts</h1>
+  <div class="qbod">
+    <div class="qside">
+    </div>
+    <div class="qtext">
+      <p>Each user of a Crypton app must have an account. </p>
+      <p><strong>crypton.generateAccount(username, passPhrase, callback, options)</strong></p>
+      <p>This method will generate an account object with salts and keys.</p>
+      <p>The <code>callback</code> function is called upon completion, passing potentially null error and account arguments.</p>
+      <p>
+        <code>options</code> is an optional object. Currently its only used property is <code>save</code> which defaults to
+        <code>true</code> and toggles an automatic <code>account.save()</code>.
+      </p>
+      <pre><code data-language="javascript">var username = 'inputFromUser';
 var passPhrase = 'moreInputFromUser';
 
-var i = 0;
-function step () {
-  console.log(++i);
-}
-
-crypton.generateAccount(username, passPhrase, step, done);
+crypton.generateAccount(username, passPhrase, done, {
+  save: false
+});
 </code></pre>
-                        <p><strong>account.save(callback)</strong></p>
-                        <p>Sends account object to the server for storage, either updating or creating the record. After saving the account (successfully or otherwise) it is still necessary to authenticate with the server.</p>
-                        <pre><code data-language="javascript">function done (err, account) {
+      <p><strong>account.save(callback)</strong></p>
+      <p>Sends account object to the server for storage, either updating or creating the record. After saving the account (successfully or otherwise) it is still necessary to authenticate with the server.</p>
+      <pre><code data-language="javascript">function done (err, account) {
   if (err) {
     // alert the user, adjust application flow
     alert(err);
@@ -32,41 +33,43 @@ crypton.generateAccount(username, passPhrase, step, done);
 
   account.save(function (err) {
     if (err) {
-      // username is taken
       alert(err);
       return;
     }
+
+    // now authenticate with username and passPhrase
   });
 });
 </code></pre>
-            </div>
+      </div>
 
-            <div class="quest">
-                <h1>Sessions</h1>
-                <div class="qbod">
-                    <div class="qside">
-                    </div>
-                    <div class="qtext">
-                        <p>A session is necessary for requesting and receiving data. </p>
-                        <p><strong>crypton.authorize(username, passPhrase, callback)</strong></p>
-                        <p>Requests a challenge from the server for the given <code>username</code> and responds to it using the given <code>passPhrase</code>.
-                        <pre><code data-language="javascript">crypton.authorize(username, passPhrase, function (err, session) {
+<div class="quest">
+  <h1>Sessions</h1>
+  <div class="qbod">
+    <div class="qside">
+    </div>
+    <div class="qtext">
+      <p>A session is necessary for requesting and receiving data. </p>
+      <p><strong>crypton.authorize(username, passPhrase, callback)</strong></p>
+      <p>Requests a challenge from the server for the given <code>username</code> and responds to it using the given <code>passPhrase</code>.
+            <pre><code data-language="javascript">crypton.authorize(username, passPhrase, function (err, session) {
   if (err) {
     // likely an incorrect passPhrase
     alert(err);
     return;
   }
+
+  window.session = session;
+  // continue application logic
 });
 </code></pre>
-                        <p><strong>session.serialize()</strong></p>
-                        <p>Serialize a session for storage.</p>
-                        <pre><code data-language="javascript">var serializedSession = session.serialize();
-
+      <p><strong>session.serialize()</strong></p>
+      <p>Serialize a session for storage.</p>
+      <pre><code data-language="javascript">var serializedSession = session.serialize();
 console.log(serializedSession);
-//
-// TODO
 </code></pre>
 
+<!--
                         <p><strong>session.ping(callback)</strong></p>
                         <p>After resurrecting a cached session, we will want to make sure the server still beleives that it is valid. For example the session may be invalid is the password has been changed since it was saved, if the account has been deleted, or if it has been disabled server-side (such as for non-payment).</p>
                         <pre><code data-language="javascript">crypton.resurrect(sessionString, function (err, session) {
@@ -80,6 +83,7 @@ console.log(serializedSession);
   });
 });
 </code></pre>
+-->
                         <p><strong>session.load(containerName, callback)</strong></p>
                         <p>Loads a <a href="/docs/containers">container</a>.</p>
                         <p><strong>session.create(containerName, callback)</strong></p>
