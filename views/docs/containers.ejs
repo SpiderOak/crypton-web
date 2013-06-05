@@ -78,7 +78,7 @@
       <p>
         Retreive an object from said container.
         This is a shortcut to <code>container.keys[key]</code>,
-        but this method should be used in case the underlying implementation changes.
+        but this method should be used in case the underlying data structure changes.
       </p>
       <p>
         Container objects may contain any type of JavaScript primitive
@@ -100,7 +100,7 @@
       <p><strong>container.save(callback)</strong></p>
       <p>
         Looks at the container's objects for changes since its last known version,
-        create a delta, encrypt the delta, and save it to the server.
+        creates a delta, encrypts the delta, and saves it to the server.
       </p>
       <pre><code data-language="javascript">var id = entries.length;
 
@@ -116,6 +116,8 @@ entries.save(function (err) {
     // alert the user
     return;
   }
+
+  // update UI
 });
 </code></pre>
       <p>
@@ -123,7 +125,8 @@ entries.save(function (err) {
         We'll store the text content separately from the metadata,
         in its own one-off container.
       </p>
-      <pre><code data-language="javascript">var text = 'Dear diary,\n\nToday, I transparently encrypted data with the RSA algorithm and it was dreamy.';
+      <pre><code data-language="javascript">var text = 'Dear diary,\n\n
+Today, I transparently encrypted data with Crypton and it was dreamy.';
 var textContainerName = 'entry:' + id;
 
 session.create(textContainerName, function (err, textContainer) {
@@ -136,6 +139,8 @@ session.create(textContainerName, function (err, textContainer) {
           // alert the user
           return;
         }
+
+        // now update a metadata container
       });
     });
   });
