@@ -7,6 +7,10 @@ module.exports = function (app) {
     res.render('getting-started');
   });
 
+  app.get('/developer-guide', function (req, res) {
+    res.render('developer-guide');
+  });
+
   app.get('/docs', function (req, res) {
     res.render('getting-started');
   });
