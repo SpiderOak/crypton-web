@@ -49,6 +49,7 @@ body {
 
 #content {
   padding-left: 250px;
+  max-width: 800px;
 }
 
 footer {
