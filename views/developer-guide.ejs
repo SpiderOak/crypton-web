@@ -603,29 +603,42 @@ db.save();
         Here are example scenarios, some of which could happen in combination:
       </p>
       <ol>
-        <li>
-          Carol makes her application browser-based, and serves the
-          application code from servers controlled by Carol.
-        </li>
-        <li>
-          Like above, except Carol works with a trusted hosting provider
-          Trent to host and serve the web application source code.
-          Trent certifies the source code.
-        </li>
-        <li>
-          Carol builds a server-side application that stores data
-          via Crypton storage servers operated by Carol.
-        </li>
-        <li>
-          Like above, except Carol uses a Crypton SDK provided by SpiderOak.
-          Data is stored inside end-user SpiderOak accounts on SpiderOak servers.
-        </li>
-        <li>
-          Carol distributes her application in the form of prepackaged,
-          signed, verifiable open source desktop and mobile applications.
-        </li>
+        <li>Backend options
+        <ol>
+          <li>
+            Carol hosts and maintains her own Crypton server.
+          </li>
+          <li>
+            Carol works with a trusted hosting provider
+            Trent to host the backend.
+          </li>
+          <li>
+            Carol uses a Crypton SDK provided by SpiderOak.
+            Data is stored inside end-user SpiderOak accounts on SpiderOak servers.
+          </li>
+          <li>
+            Carol builds a custom server-side proxy application that
+            renders pages, forwards requests, and stores data
+            via Crypton storage servers operated by Carol.
+          </li>
+        </ol></li>
+        <li>Fronend options
+        <ol>
+          <li>
+            Carol uses a CDN to host the static frontend application.
+          </li>
+          <li>
+            Carol uses a custom backend server to render frontend assets.
+          </li>
+          <li>
+            Carol distributes her frontend application in the form of prepackaged,
+            signed, verifiable open source desktop and mobile applications.
+          </li>
+        </ol></li>
       </ol>
-
+      <p>
+        As Crypton matures, we will provide more detailed guides for each option.
+      </p>
     </div>
   </div>
 </div>
