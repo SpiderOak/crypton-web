@@ -15,8 +15,8 @@ module.exports = function (app) {
     res.render('getting-started');
   });
 
-  app.get('/docs/sessions', function (req, res) {
-    res.render('docs/sessions');
+  app.get('/docs/accounts', function (req, res) {
+    res.render('docs/accounts');
   });
 
   app.get('/docs/containers', function (req, res) {
