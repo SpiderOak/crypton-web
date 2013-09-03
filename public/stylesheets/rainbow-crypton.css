@@ -1,0 +1,75 @@
+/**
+ * Crypton theme
+ *
+ * Adapted from a theme based on:
+ * https://github.com/ccampbell/rainbow/blob/master/themes/obsidian.css
+ *
+ * @author Benny M.
+ * @version 1.0
+ */
+pre {
+    background: #383838;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+    color: #9b817b;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+code {word-wrap: break-word}
+
+pre, code {
+    font-family: 'Monaco', courier, monospace;
+}
+
+pre .comment {
+	color: #b1bd9c;
+}
+
+pre .constant {
+	color: #EC7600;
+}
+
+pre .storage {
+	color: #EC7600;
+}
+
+pre .string, pre .comment.docstring {
+	color: #EC7600;
+}
+
+pre .string.regexp, pre .support.tag.script, pre .support.tag.style {
+    color: #fff;
+}
+
+
+pre .keyword, pre .selector {
+	color: #93C763;
+}
+
+pre .inherited-class {
+    font-style: italic;
+}
+
+pre .entity {
+	color: #93C763;
+}
+
+pre .integer {
+	color: #FFCD22;
+}
+
+pre .support, *[data-language="shell"] .function.call {
+	color: #ba6910;
+}
+
+pre .variable.global, pre .variable.class, pre .variable.instance {
+	color: #CCC;
+}
+
+/* C# specific rule */
+pre .preprocessor {
+	color: #66747B;
+}
