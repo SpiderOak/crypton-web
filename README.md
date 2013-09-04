@@ -24,3 +24,5 @@ Various spacing adjustments are neede. Will complete that after all the pages ar
 Doc's pages should fall right into place with just a few tweaks.
 
 Also, metawork to be done. Descriptions, keywords, etc.
+
+AlsoII -- Make a prettier favicon
