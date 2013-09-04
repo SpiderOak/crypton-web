@@ -6,9 +6,13 @@
 .temp-marker {
 	height:478px;
 	width:850px;
-	background-color:#5d5d5d;
+	background-color:@std-gray;
 	margin:60px auto;
 }
+
+// Variables
+@std-gray: #5d5d5d;
+@std-orange: #e97d24;
 
 .boxShadow(@x:3px; @y:3px; @blur:3px; @color:#000) {
 	box-shadow:@arguments;
@@ -26,7 +30,7 @@
 
 .left {text-align:left}
 .right {text-align:right}
-.dark {color:#5d5d5d}
+.dark {color:@std-gray}
 
 body {
 	margin:0;
@@ -36,7 +40,7 @@ body {
 	&.body-getting-started #getting-started,
 	&.body-documentation #documentation,
 	&.body-developer-guide #developer-guide,
-	&.body-examples #examples {border-bottom:5px solid #5d5d5d}
+	&.body-examples #examples {border-bottom:5px solid @std-gray}
 }
 
 a, a:hover, a:visited {
@@ -53,7 +57,7 @@ a, a:hover, a:visited {
 	padding:1px 30px;
 	position:fixed;
 	z-index:20;
-	border-bottom:2px solid #5d5d5d;
+	border-bottom:2px solid @std-gray;
 
 	.boxShadow(-20px; 2px; 10px; #000);
 }
@@ -114,6 +118,7 @@ a, a:hover, a:visited {
 	&.no-bg {
 		background-color:#ffffff;
 	}
+	&.padd20 {padding-top:20px}
 	&:after{.after}
 	&:nth-child(-n+1){padding-top:90px}
 }
@@ -139,7 +144,7 @@ a, a:hover, a:visited {
 	}
 
 	.box {
-	margin:0 10px;
+	margin:10px;
 	float:left;
 
 	&:first-child{margin-left:0;}
@@ -161,6 +166,12 @@ a, a:hover, a:visited {
 		&.col4 {margin-left:51%}
 		&.col5 {margin-left:68%}
 		&.col6 {margin-left:85%}
+
+		&.rounded {
+			border-radius:8px;
+			border:1px solid #d2d2d2;
+			&:hover {background-color:#f7f7f7}
+		}
 	}
 
 	&.one {
@@ -185,6 +196,17 @@ a, a:hover, a:visited {
 	h2 {margin-bottom:49px;}
 }
 
+.body-developer-guide {
+
+	.wrapper {
+
+		a {
+			color:@std-orange;
+			&:hover {color:lighten(@std-orange, 12%)}
+		}
+	}
+}
+
 h1 {
 	font:68px~"/"39px ProximaNovaA-Bold;
 	color:#ffffff;
@@ -199,7 +221,7 @@ h2 {
 
 h3 {
 	font:20px~"/"24px ProximaNovaA-Bold;
-	color:#5d5d5d;
+	color:@std-gray;
 
 	&.bigger {
 		font:44px~"/"53px ProximaNovaA-Bold;
@@ -216,11 +238,22 @@ h3 {
 	}
 
 	&.subheading {margin-top:60px}
+	&.box-subheading {padding:20px 20px 0}
 }
 
 p {
 	font:16px~"/"24px ProximaNovaA-Regular;
-	color:#5d5d5d;
+	color:@std-gray;
+
+	&.box-info {
+		padding:0 20px 20px;
+		margin-top:-15px;
+	}
+}
+
+ol {
+	font:16px~"/"24px ProximaNovaA-Regular;
+	color:darken(@std-gray, 10%)
 }
 
 hr{
@@ -231,9 +264,17 @@ hr{
 	border:none;
 }
 
+pre { /* Borrowed from http://www.longren.org/wrapping-text-inside-pre-tags/ */
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 .examples {
 	width:660px;
-	border:1px solid #5d5d5d;
+	border:1px solid @std-gray;
 }
 
 .code-lang {
@@ -254,7 +295,7 @@ hr{
 	font:16px~"/"20px ProximaNovaA-Bold;
 
 	&.orange{
-		background-color:#e97d24;
+		background-color: @std-orange;
 		border-color:#ff7500;
 
 		&:hover {background-color:#ff7500}
@@ -262,10 +303,10 @@ hr{
 
 	&.silver {
 		background-color:#9d9d9d;
-		border-color:#5d5d5d;
+		border-color:@std-gray;
 
 		&:hover {
-			background-color:#5d5d5d;
+			background-color:@std-gray;
 		}
 	}
 
@@ -279,4 +320,13 @@ hr{
 		margin:0 10px;
 	}
 
+}
+
+span {
+	&.icon {
+		display:block;
+		padding:20px 20px 30px;
+		font-size:65px;
+		color:#bbb;
+	}
 }
