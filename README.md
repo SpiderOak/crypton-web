@@ -22,6 +22,4 @@ Various spacing adjustments are neede. Will complete that after all the pages ar
 TOOD:
 - Metawork. Descriptions, keywords, etc.
 - Make a prettier favicon
-- Links the rest of the things
-- Format examples
-- Align HR's on index
+- Build github side-tag
