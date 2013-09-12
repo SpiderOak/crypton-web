@@ -18,13 +18,10 @@ Once all the styles are in place, I'll compile the less into a proper minified c
 After the initial completion of the pages, some tweaks will have to be made.
 
 Various spacing adjustments are neede. Will complete that after all the pages are in place.
-Doc's pages should fall right into place with just a few tweaks.
 
 TOOD:
 - Metawork. Descriptions, keywords, etc.
 - Make a prettier favicon
-- Make footer
-- Links to all the things
-- Format Docs/examples
+- Links the rest of the things
+- Format examples
 - Align HR's on index
-- Line-up Getting Started with mockup
