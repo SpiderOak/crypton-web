@@ -15,11 +15,11 @@
 		</div>
 		<div class="row">
 			<div class="left box col2">
-			<h3 class="subheading">DEPENDENCIES</h3>
-			<p>The Crypton server depends on PostgreSQL and Node.js v0.10.x</p>
+				<h3 class="subheading">DEPENDENCIES</h3>
+				<p>The Crypton server depends on PostgreSQL and Node.js v0.10.x</p>
 
-			<pre class="examples">
-				<code data-language="shell">
+				<pre class="examples">
+					<code data-language="shell">
 # update apt
 sudo apt-get update
 
@@ -51,31 +51,38 @@ make
 # setup the database
 cd integration_tests
 make setup-test-environment
-			</code></pre>
+					</code>
+				</pre>
 
-			<h3 class="subheading">RUNNING THE SERVER</h3>
-			<pre class="examples"><code data-language="shell">
+				<h3 class="subheading">RUNNING THE SERVER</h3>
+				<pre class="examples">
+					<code data-language="shell">
 cd crypton/server
 npm link
 which crypton # should be ./server.js
 NODE_ENV=test crypton
-			</code></pre>
+					</code>
+				</pre>
 
-			<p>To clean the database (remove all data):</p>
+				<p>To clean the database (remove all data):</p>
 
-			<pre class="examples"><code data-language="shell">
+				<pre class="examples">
+					<code data-language="shell">
 cd crypton/integration_tests make clean-test-db
-			</code></pre>
+					</code>
+				</pre>
 
-			<h3 class="subheading">CLIENT COMPILATION</h3>
-			<p>To generate the un- and minified versions of the client code:</p>
-			<pre class="examples"><code data-language="shell">
+				<h3 class="subheading">CLIENT COMPILATION</h3>
+				<p>To generate the un- and minified versions of the client code:</p>
+				<pre class="examples">
+					<code data-language="shell">
 cd crypton/client
 ./compile.sh --once
 # crypton.js and crypton.min.js should now be in crypton/client/dist
 # if --once is left off, compile.sh recompile once a change in the
 # client directory is detected
-			</code></pre>
+					</code>
+				</pre>
 			</div>
 		</div>
 	</div>

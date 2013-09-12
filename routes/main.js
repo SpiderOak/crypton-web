@@ -23,6 +23,10 @@ module.exports = function (app) {
     res.render('getting-started');
   });
 
+    app.get('/connect-with-crypton', function (req, res) {
+    res.render('connect');
+  });
+
   app.get('/docs/accounts', function (req, res) {
     res.render('docs/accounts');
   });
