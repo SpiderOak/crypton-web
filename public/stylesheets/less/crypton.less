@@ -1,5 +1,13 @@
 // LESS file for Crypton.io
 
+// Temporary spacers
+.temp-marker {
+	width:850px;
+	height:478px;
+	background-color:lighten(@std-gray, 20%);
+	position:relative;
+	margin:60px auto;
+}
 
 // Variables
 @std-gray: #5d5d5d;
@@ -84,6 +92,8 @@ a, a:hover, a:visited {
 	.logo {
 		height:80px;
 		transition:all 0.5s ease;
+		position:relative;
+		left:-12px;
 
 		&:hover {
 			transform:rotate(-7deg);
@@ -103,6 +113,8 @@ a, a:hover, a:visited {
 			color:#fff;
 			font:16px~"/"45px ProximaNovaA-Bold;
 			padding:5px 0;
+
+			&:last-child { margin-right:0 }
 		}
 	}
 }
@@ -163,10 +175,10 @@ a, a:hover, a:visited {
 			width:49%
 		}
 		&.block {
-			width:70%;
+			width:69%;
 		}
 
-		&.col1 {margin-left:0%}
+		&.col1 {margin-left:11%}
 		&.col2 {margin-left:17%}
 		&.col3 {margin-left:34%}
 		&.col4 {margin-left:51%}
@@ -202,7 +214,8 @@ a, a:hover, a:visited {
 	h2 {margin-bottom:49px;}
 }
 
-.body-developer-guide {
+.body-developer-guide,
+.body-docs {
 
 	.wrapper {
 
@@ -303,7 +316,6 @@ pre { /* Borrowed from http://www.longren.org/wrapping-text-inside-pre-tags/ */
 	color:#ffffff;
 	margin:0;
 	padding:8px;
-	/*width:100%*/
 	position:relative;
 	top:-27px;
 	left:-8px;
@@ -311,7 +323,7 @@ pre { /* Borrowed from http://www.longren.org/wrapping-text-inside-pre-tags/ */
 
 .button {
 	border-radius:3px;
-	padding:4px 10px;
+	padding:6px 10px;
 	color:#fff;
 	font:16px~"/"20px ProximaNovaA-Bold;
 

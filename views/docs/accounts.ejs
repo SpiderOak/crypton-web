@@ -1,13 +1,14 @@
 <%
   title="Crypton.io | Docs & Examples"
   currentBody="body-docs"
+  selected=""
 %>
 
 <div class="wrapper no-bg">
   <div class="container">
     <div class="row">
-      <div class="box left col2">
-      <h2 class="dark left col2">Accounts</h2>
+      <div class="box left col1 block">
+      <h2 class="dark left col1">Accounts</h2>
       <p>Each user of a Crypton app must have an account.</p>
       <p><strong>crypton.generateAccount(username, passPhrase, callback, options)</strong></p>
       <p>This method will generate an account object with salts and keys.</p>
@@ -46,7 +47,7 @@ crypton.generateAccount(username, passPhrase, done, {
     </div>
   <a name="sessions" class="anchor"></a>
   <div class="row">
-  <div class="box left col2">
+  <div class="box left col1 block">
       <h2 class="dark left">Sessions</h2>
       <p>A session is necessary for requesting and receiving data. </p>
       <p><strong>crypton.authorize(username, passPhrase, callback)</strong></p>
