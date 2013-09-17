@@ -265,6 +265,7 @@ h3 {
 		width:660px;
 		padding:10px;
 		font-size:17px;
+		border-radius:6px;
 	}
 
 	&.subheading {margin-top:60px}
@@ -391,4 +392,26 @@ span {
 		}
 
 	}
+}
+
+.featured-wrapper {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #EFEFEF 100%) repeat scroll 0 0 transparent;
+    height:183px;
+    margin-top:80px;
+	
+	h4 {
+    	color: lighten(@std-gray, 20%);
+    	font: 18px~"/"18px ProximaNovaA-Bold;
+    	text-align: center;
+		}
+
+	.featured-img {
+    	margin: 0 15px;
+    	opacity: 0.5;
+    	height:63px;
+    	transition: transform 400ms ease 0s, opacity 400ms ease 0s;
+		&:hover {
+    		opacity: 1;
+    	}
+    }
 }
