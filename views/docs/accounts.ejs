@@ -1,13 +1,15 @@
-<link rel="stylesheet" type="text/css" href="/stylesheets/github.css" />
-<script src="/javascripts/rainbow.min.js"></script>
+<%
+  title="Crypton.io | Docs & Examples"
+  currentBody="body-docs"
+  selected=""
+%>
 
-<div class="quest">
-  <h1>Accounts</h1>
-  <div class="qbod">
-    <div class="qside">
-    </div>
-    <div class="qtext">
-      <p>Each user of a Crypton app must have an account. </p>
+<div class="wrapper no-bg">
+  <div class="container">
+    <div class="row">
+      <div class="box left col1 block">
+      <h2 class="dark left col1">Accounts</h2>
+      <p>Each user of a Crypton app must have an account.</p>
       <p><strong>crypton.generateAccount(username, passPhrase, callback, options)</strong></p>
       <p>This method will generate an account object with salts and keys.</p>
       <p>The <code>callback</code> function is called upon completion, passing potentially null error and account arguments.</p>
@@ -15,16 +17,15 @@
         <code>options</code> is an optional object. Currently its only used property is <code>save</code> which defaults to
         <code>true</code> and toggles an automatic <code>account.save()</code>.
       </p>
-      <pre><code data-language="javascript">var username = 'inputFromUser';
+      <pre class="examples"><code data-language="javascript">var username = 'inputFromUser';
 var passPhrase = 'moreInputFromUser';
 
 crypton.generateAccount(username, passPhrase, done, {
   save: false
-});
-</code></pre>
+});</code></pre>
       <p><strong>account.save(callback)</strong></p>
       <p>Sends account object to the server for storage, either updating or creating the record. After saving the account (successfully or otherwise) it is still necessary to authenticate with the server.</p>
-      <pre><code data-language="javascript">function done (err, account) {
+      <pre class="examples"><code data-language="javascript">function done (err, account) {
   if (err) {
     // alert the user, adjust application flow
     alert(err);
@@ -39,20 +40,17 @@ crypton.generateAccount(username, passPhrase, done, {
 
     // now authenticate with username and passPhrase
   });
-});
-</code></pre>
-      </div>
-
-<div class="quest">
-  <h1>Sessions</h1>
-  <div class="qbod">
-    <div class="qside">
+});</code></pre>
     </div>
-    <div class="qtext">
+    </div>
+  <a name="sessions" class="anchor"></a>
+  <div class="row">
+  <div class="box left col1 block">
+      <h2 class="dark left">Sessions</h2>
       <p>A session is necessary for requesting and receiving data. </p>
       <p><strong>crypton.authorize(username, passPhrase, callback)</strong></p>
       <p>Requests a challenge from the server for the given <code>username</code> and responds to it using the given <code>passPhrase</code>.
-            <pre><code data-language="javascript">crypton.authorize(username, passPhrase, function (err, session) {
+            <pre class="examples"><code data-language="javascript">crypton.authorize(username, passPhrase, function (err, session) {
   if (err) {
     // likely an incorrect passPhrase
     alert(err);
@@ -61,33 +59,18 @@ crypton.generateAccount(username, passPhrase, done, {
 
   window.session = session;
   // continue application logic
-});
-</code></pre>
+});</code></pre>
       <p><strong>session.serialize()</strong></p>
       <p>Serialize a session for storage.</p>
-      <pre><code data-language="javascript">var serializedSession = session.serialize();
-console.log(serializedSession);
-</code></pre>
+      <pre class="examples"><code data-language="javascript">var serializedSession = session.serialize();
+console.log(serializedSession);</code></pre>
 
-<!--
-                        <p><strong>session.ping(callback)</strong></p>
-                        <p>After resurrecting a cached session, we will want to make sure the server still beleives that it is valid. For example the session may be invalid is the password has been changed since it was saved, if the account has been deleted, or if it has been disabled server-side (such as for non-payment).</p>
-                        <pre><code data-language="javascript">crypton.resurrect(sessionString, function (err, session) {
-  session.ping(function (err) {
-    if (err) {
-      // alert the user
-      return;
-    }
+      <p><strong>session.load(containerName, callback)</strong></p>
+      <p>Loads a <a href="/docs/containers">container</a>.</p>
+      <p><strong>session.create(containerName, callback)</strong></p>
+      <p>Attempts to create a <a href="/docs/containers">container</a>.</p>
+  </div>
+</div>
+</div>
+</div>
 
-    // continue application flow
-  });
-});
-</code></pre>
--->
-                        <p><strong>session.load(containerName, callback)</strong></p>
-                        <p>Loads a <a href="/docs/containers">container</a>.</p>
-                        <p><strong>session.create(containerName, callback)</strong></p>
-                        <p>Attempts to create a <a href="/docs/containers">container</a>.</p>
-                    </div>
-                </div>
-            </div>

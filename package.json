@@ -6,6 +6,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "emerald-core": "0.0.3"
+    "emerald-core": "0.0.5"
   }
 }
