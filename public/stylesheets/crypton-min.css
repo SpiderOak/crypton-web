@@ -66,4 +66,4 @@ span.icon{display:block;padding:20px 20px 30px;font-size:65px;color:#bbb}
 .featured-wrapper .featured-img{margin:0 15px;opacity:.5;height:63px;transition:transform 400ms ease 0,opacity 400ms ease 0}.featured-wrapper .featured-img:hover{opacity:1}
 .video{position:relative;width:860px;margin:60px auto}
 .gh-tab{position:fixed;right:0;top:200px;height:154px;width:100px;background-color:#fff;z-index:300;text-align:center;border-top-left-radius:6px;border-bottom-left-radius:6px}
-.gh-buttons{width:50px;margin:0 auto}
+.gh-buttons{width:50px;margin:0 auto}img {border:none;}
