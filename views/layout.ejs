@@ -4,8 +4,7 @@
 		<meta charset=utf-8>
 		<title><%- title %></title>
 		<script src="/javascripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-		<link rel="stylesheet" type="text/less" media="screen" href="/stylesheets/less/crypton.less" />
-		<script src="/stylesheets/less/less-1.4.1.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/crypton-min.css" />
 		<script src="/javascripts/rainbow.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rainbow-crypton.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/proxima_nova_kit.css" />
@@ -43,6 +42,15 @@
 		</div>
 
 		<div class="leader">
+			<div class="gh-tab">
+				<p>Crypton on Github</p>
+				<div class="gh-buttons">
+				<iframe src="http://ghbtns.com/github-btn.html?user=spideroak&repo=crypton&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  				<iframe src="http://ghbtns.com/github-btn.html?user=spideroak&repo=crypton&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  				</div>
+			</div>
 			<%- body %>
 			<div class="footer-wrapper">
 				<div class="footer">
