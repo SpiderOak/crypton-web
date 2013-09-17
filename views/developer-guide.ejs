@@ -18,7 +18,7 @@
 		      </p>
 
 		      <hr />
-		      <h3>Concepts</h3>
+		      <h2 class="dark">Concepts</h2>
 		      <h3 class="subheading">User Account Generation and Authentication</h3>
 		      <p>
 		        In Crypton applications, the framework deals with user account generation,
@@ -52,65 +52,65 @@
 
 // Object databases generally expose a root object,
 // which can be extended to any level.
-	var db = new ObjectDB();
+var db = new ObjectDB();
 
 // For example, a book catalog might look like this:
 
 // We just add objects to the database.
-	db.books = [];
-	db.authors = [];
-	db.publishers = [];
+db.books = [];
+db.authors = [];
+db.publishers = [];
 
 // and treat them like regular objects.
 
-	var new_author_id = uuid();
-	db.authors.push({ 
-		id: new_author_id,
-		name: "Arnold Robbits"
-	});
+var new_author_id = uuid();
+db.authors.push({ 
+  id: new_author_id,
+  name: "Arnold Robbits"
+});
 
-	var new_publisher_id = uuid();
-	db.publishers.push({
-		id: new_publisher_id,
-		name: "O'Reilly Media, Inc.",
-		phone: "800-998-9938"
-	});
+var new_publisher_id = uuid();
+db.publishers.push({
+  id: new_publisher_id,
+  name: "O'Reilly Media, Inc.",
+  phone: "800-998-9938"
+});
 
-	var new_book_id = uuid();
-	db.books.push({
-		id: new_book_id,
-		name: "Bash Pocket Reference",
-		date: "2010-05-01",
-		isbn: "987-1-449-38788-4",
-		author: new_author_id,
-		publisher: new_publisher_id,
-	});
+var new_book_id = uuid();
+db.books.push({
+  id: new_book_id,
+  name: "Bash Pocket Reference",
+  date: "2010-05-01",
+  isbn: "987-1-449-38788-4",
+  author: new_author_id,
+  publisher: new_publisher_id,
+});
 
 // save all of our changes atomically.
-	db.save();
+db.save();
 
 // we could re-arrange and add "index objects" for quick lookups by name, etc.
-	db.authors = {
-		list: db.authors
-	};
-	db.authors.by_id = make_index(db.authors.list, "id");
-	db.authors.by_name = make_index(db.authors.list, "name");
+db.authors = {
+  list: db.authors
+};
+db.authors.by_id = make_index(db.authors.list, "id");
+db.authors.by_name = make_index(db.authors.list, "name");
 
-	function make_index (list, key) {
-		var i = 0;
-		var index = {};
-		for (; i < list.length; i++) {
-		  if (list[i] && list[i][key]) {
-		    if (!index[list[i][key]]) {
-		      index[list[i][key]] = [];
-		    }
-		    index[list[i][key]].push(i);
-		  }
-		}
-		return index;
-	}
+function make_index (list, key) {
+  var i = 0;
+  var index = {};
+  for (; i < list.length; i++) {
+    if (list[i] && list[i][key]) {
+      if (!index[list[i][key]]) {
+        index[list[i][key]] = [];
+      }
+      index[list[i][key]].push(i);
+    }
+  }
+  return index;
+}
 
-	db.save();
+db.save();
 
 // Anyway, the basic idea is just that you persist data by way of using
 // objects very close to the ways they exist naturally.
@@ -401,7 +401,7 @@
 		      </p>
 
 		      <hr />
-		      <h3>Container Organization Approaches for Various Situations</h3>
+		      <h2 class="dark">Container Organization Approaches for Various Situations</h2>
 		      <p>
 		        There's as many ways to lay out containers as there are types
 		        of applications that use them. I think if we go through a few examples,
@@ -538,7 +538,7 @@
 		      </p>
 
 		      <hr />
-		      <h3>Tour of Server Side Storage</h3>
+		      <h2 class="dark">Tour of Server Side Storage</h2>
 		      <p>
 		        The best place to understand this in detail is reading
 		        <a href="https://github.com/SpiderOak/crypton/blob/master/server/lib/stores/postgres/sql/setup.sql">the well commented schema</a>.
@@ -598,7 +598,7 @@
 		      </p>
 
 		      <hr />
-		      <h3>Application Deployment, Distribution, and Threat Models</h3>
+		      <h2 class="dark">Application Deployment, Distribution, and Threat Models</h2>
 		      <p>
 		        There are a variety of ways Crypton applications
 		        might be developed, packaged, deployed, and hosted.
