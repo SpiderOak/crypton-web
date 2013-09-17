@@ -22,8 +22,7 @@ var passPhrase = 'moreInputFromUser';
 
 crypton.generateAccount(username, passPhrase, done, {
   save: false
-});
-      </code></pre>
+});</code></pre>
       <p><strong>account.save(callback)</strong></p>
       <p>Sends account object to the server for storage, either updating or creating the record. After saving the account (successfully or otherwise) it is still necessary to authenticate with the server.</p>
       <pre class="examples"><code data-language="javascript">function done (err, account) {
@@ -41,8 +40,7 @@ crypton.generateAccount(username, passPhrase, done, {
 
     // now authenticate with username and passPhrase
   });
-});
-      </code></pre>
+});</code></pre>
     </div>
     </div>
   <a name="sessions" class="anchor"></a>
@@ -61,13 +59,11 @@ crypton.generateAccount(username, passPhrase, done, {
 
   window.session = session;
   // continue application logic
-});
-      </code></pre>
+});</code></pre>
       <p><strong>session.serialize()</strong></p>
       <p>Serialize a session for storage.</p>
       <pre class="examples"><code data-language="javascript">var serializedSession = session.serialize();
-console.log(serializedSession);
-      </code></pre>
+console.log(serializedSession);</code></pre>
 
       <p><strong>session.load(containerName, callback)</strong></p>
       <p>Loads a <a href="/docs/containers">container</a>.</p>
