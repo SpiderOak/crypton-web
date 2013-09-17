@@ -31,13 +31,13 @@ sudo apt-get install git-core
 sudo apt-get install make g++ curl libssl-dev apache2-utils
 
 # install node.js
-wget http://nodejs.org/dist/v0.10.10/node-v0.10.10.tar.gz
-tar xzf node-v0.10.10.tar.gz
-cd node-v0.10.10
+wget http://nodejs.org/dist/latest/node-v0.10.18.tar.gz
+tar xzf node-v0.10.18.tar.gz
+cd node-v0.10.18
 ./configure
 make && sudo make install
 cd ..
-rm -rf node-v0.10.10*
+rm -rf node-v0.10.18*
 
 # get crypton
 git clone https://github.com/SpiderOak/crypton.git

@@ -41,8 +41,7 @@
         <pre class="examples"><code data-language="javascript">session.load('diary', function (err, diary) {
   // diary is a container, specific to the current account
   window.diary = diary;
-});
-        </code></pre>
+});</code></pre>
 
         <p><strong>session.create(containerName, callback)</strong></p>
         <p>
@@ -62,8 +61,7 @@
 
   window.diary = container;
   doSomethingWithContainer();
-});
-      </code></pre>
+});</code></pre>
 
       <p><strong>container.add(key, callback)</strong></p>
       <p>
@@ -72,8 +70,7 @@
       </p>
       <pre class="examples"><code data-language="javascript">diary.add('entries', function () {
   // diary now has an entries object
-});
-</code></pre>
+});</code></pre>
 
       <p><strong>container.get(key, callback)</strong></p>
       <p>
@@ -95,8 +92,7 @@
     // will overwrite its reference to the container
     // (for example, saying window.entries = {} later will not affect the object itself)
   });
-});
-</code></pre>
+});</code></pre>
 
       <p><strong>container.save(callback)</strong></p>
       <p>
@@ -119,8 +115,7 @@ entries.save(function (err) {
   }
 
   // update UI
-});
-</code></pre>
+});</code></pre>
       <p>
         Let's add some more content to this entry.
         We'll store the text content separately from the metadata,
@@ -145,8 +140,7 @@ session.create(textContainerName, function (err, textContainer) {
       });
     });
   });
-});
-</code></pre>
+});</code></pre>
       </div>
     </div>
   </div>

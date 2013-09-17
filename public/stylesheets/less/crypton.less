@@ -57,6 +57,10 @@ a, a:hover, a:visited {
 	color:#fff;
 }
 
+.box-info a {
+  color: #000;
+}
+
 .navigation-wrapper {
 	height:75px;
 	background:url('/images/background.png');
@@ -155,8 +159,8 @@ a, a:hover, a:visited {
 	padding:0;
 
 	.box-center {
-		margin:0 auto;
-		width:44%;
+    display: inline-block;
+		margin: 0 auto;
 	}
 
 	.box {
@@ -248,6 +252,11 @@ h1 {
 h2 {
 	font:34px~"/"39px ProximaNovaA-Bold;
 	color:#ffffff;
+
+  &.dark {
+    color: #5d5d5d;
+    margin-bottom: 0;
+  }
 }
 
 h3 {
@@ -269,7 +278,7 @@ h3 {
 		border-radius:6px;
 	}
 
-	&.subheading {margin-top:60px}
+	&.subheading {margin-top:40px}
 	&.box-subheading {padding:20px 20px 0}
 }
 
