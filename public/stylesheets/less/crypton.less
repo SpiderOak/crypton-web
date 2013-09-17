@@ -1,0 +1,451 @@
+// LESS file for Crypton.io
+
+// Temporary spacers
+.temp-marker {
+	width:850px;
+	height:478px;
+	background-color:lighten(@std-gray, 20%);
+	position:relative;
+	margin:60px auto;
+}
+
+// Variables
+@std-gray: #5d5d5d;
+@std-orange: #e97d24;
+
+
+.boxShadow(@x:3px; @y:3px; @blur:3px; @color:#000) {
+	box-shadow:@arguments;
+}
+
+.textShadow(@x:3px; @y:3px; @blur:3px; @color:#000) {
+	text-shadow:@arguments;
+}
+
+.after {
+	display:block;
+	content:"";
+	clear:both;
+}
+
+.left {text-align:left}
+.right {text-align:right}
+.center {text-align:center}
+.dark {color:@std-gray}
+
+.anchor {
+	display:block;
+	padding-top:90px;
+}
+
+html, body { height:100% }
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#fff;
+	-webkit-font-smoothing: antialiased;
+
+	&.body-getting-started #getting-started,
+	&.body-documentation #documentation,
+	&.body-developer-guide #developer-guide,
+	&.body-examples #examples {border-bottom:5px solid @std-gray}
+}
+
+a, a:hover, a:visited {
+	text-decoration:none;
+	color:#fff;
+}
+
+.box-info a {
+  color: #000;
+}
+
+.navigation-wrapper {
+	height:75px;
+	background:url('/images/background.png');
+	margin:0;
+	padding:1px 30px;
+	position:fixed;
+	z-index:20;
+	border-bottom:2px solid @std-gray;
+
+	.boxShadow(-1px; 2px; 16px; #000);
+
+	left:0;
+	right:0;
+}
+
+.cover {
+	height:100%;
+	background-color:#000;
+	opacity:0.5;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	z-index:25;
+}
+
+.navigation {
+	width:1000px;
+	margin:0 auto;
+	text-align:left;
+	position:relative;
+	z-index:30;
+
+	.logo {
+		height:80px;
+		transition:all 0.5s ease;
+		position:relative;
+		left:-12px;
+
+		&:hover {
+			transform:rotate(-7deg);
+		}
+	}
+
+	.links {
+		float:right;
+
+		ul {
+			list-sryle:none;
+		}
+
+		li {
+			display:inline;
+			margin:0 10px;
+			color:#fff;
+			font:16px~"/"45px ProximaNovaA-Bold;
+			padding:5px 0;
+
+			&:last-child { margin-right:0 }
+		}
+	}
+}
+
+.leader { 
+	min-height:100%;
+	position:relative;
+	padding-bottom:200px;
+}
+
+.wrapper {
+	margin:0;
+	padding:90px 0 1px;
+	position:relative;
+
+	&.bg {
+		background:url('/images/background.png');
+	}
+	&.no-bg {
+		background-color:#ffffff;
+	}
+	&.padd20 {padding-top:20px}
+	&:after{.after}
+	&:nth-child(-n+1){padding-top:90px}
+}
+
+.container {
+	position:relative;
+	width:1000px;
+	margin:0 auto;
+	&:after{.after}
+}
+
+.row {
+	position:relative;
+	margin:0;
+	padding:0;
+
+	.box-center {
+    display: inline-block;
+		margin: 0 auto;
+	}
+
+	.box {
+	margin:10px;
+	float:left;
+
+	&:first-child{margin-left:0;}
+	&:last-child{margin-right:0;}
+
+		&.six {
+			width:15%;
+		}
+		&.three {
+			width:32%;
+		}
+		&.two {
+			width:49%
+		}
+		&.block {
+			width:69%;
+		}
+
+		&.col1 {margin-left:11%}
+		&.col2 {margin-left:17%}
+		&.col3 {margin-left:34%}
+		&.col4 {margin-left:51%}
+		&.col5 {margin-left:68%}
+		&.col6 {margin-left:85%}
+
+		&.rounded {
+			border-radius:8px;
+			border:1px solid #d2d2d2;
+			&:hover {background-color:#f7f7f7}
+		}
+	}
+
+	&.one {
+		background-color:#ffffff;
+		margin:20px 0;
+		height:30px;
+	}
+
+	&:after{.after;}
+
+	&.content {
+		background-color:#ffffff;
+	}
+}
+
+.body-index {
+	h1, h2 {
+		.textShadow(@blur:10px);
+		line-height:30px;
+	}
+
+	h2 {margin-bottom:49px;}
+}
+
+.body-developer-guide,
+.body-docs {
+
+	.wrapper {
+
+		a {
+			color:@std-orange;
+			&:hover {color:lighten(@std-orange, 12%)}
+		}
+	}
+}
+
+.body-connect {
+	p.box-info {
+		color:@std-orange;
+	}
+	.box:hover {
+		.box-info {
+			color:@std-gray;
+		}
+	}
+}
+
+h1 {
+	font:68px~"/"39px ProximaNovaA-Bold;
+	color:#ffffff;
+
+	&.smaller {font:44px~"/"53px ProximaNovaA-Bold}
+}
+
+h2 {
+	font:34px~"/"39px ProximaNovaA-Bold;
+	color:#ffffff;
+
+  &.dark {
+    color: #5d5d5d;
+    margin-bottom: 0;
+  }
+}
+
+h3 {
+	font:20px~"/"24px ProximaNovaA-Bold;
+	color:@std-gray;
+
+	&.bigger {
+		font:44px~"/"53px ProximaNovaA-Bold;
+		margin-bottom:30px;
+	}
+
+	&.warning {
+		background-color:#c43223;
+		color:#ffffff;
+		text-align:left;
+		width:660px;
+		padding:10px;
+		font-size:17px;
+		border-radius:6px;
+	}
+
+	&.subheading {margin-top:40px}
+	&.box-subheading {padding:20px 20px 0}
+}
+
+p {
+	font:16px~"/"24px ProximaNovaA-Regular;
+	color:@std-gray;
+
+	&.box-info {
+		padding:0 20px 20px;
+		margin-top:-15px;
+	}
+}
+
+ol {
+	font:16px~"/"24px ProximaNovaA-Regular;
+	color:darken(@std-gray, 10%)
+}
+
+hr{
+	height:1px;
+	margin:0 0 40px 0;
+	background:#e6e6e6;
+	border:none;
+
+	&.underline {
+		position:relative;
+		top:-14px;
+	}
+}
+
+pre { /* Borrowed from http://www.longren.org/wrapping-text-inside-pre-tags/ */
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.examples {
+	width:660px;
+	border:1px solid @std-gray;
+}
+
+.code-lang {
+	background-color:#090909;
+	color:#ffffff;
+	margin:0;
+	padding:8px;
+	position:relative;
+	top:-27px;
+	left:-8px;
+}
+
+.button {
+	border-radius:3px;
+	padding:6px 10px;
+	color:#fff;
+	font:16px~"/"20px ProximaNovaA-Bold;
+
+	&.orange{
+		background-color: @std-orange;
+		border-color:#ff7500;
+
+		&:hover {background-color:#ff7500}
+	}
+
+	&.silver {
+		background-color:#9d9d9d;
+		border-color:@std-gray;
+
+		&:hover {
+			background-color:@std-gray;
+		}
+	}
+
+	&.large {
+		display:block;
+		font-size:20px;
+		line-height:58px;
+		height:59px;
+		width:179px;
+		float:left;
+		margin:0 10px;
+	}
+
+}
+
+span {
+	&.icon {
+		display:block;
+		padding:20px 20px 30px;
+		font-size:65px;
+		color:#bbb;
+	}
+}
+
+.footer-wrapper {
+	height:120px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+
+	.footer {
+		background-color:#fff;
+		padding:20px;
+		width:1000px;
+		margin:0 auto;
+		height:inherit;
+
+		.copyright{
+			float:left;
+		}
+		.connect {
+			float:right;
+			text-align:right;
+		}
+		a {
+			color:@std-orange;
+			&:hover { color:@std-gray }
+		}
+
+	}
+}
+
+.featured-wrapper {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #EFEFEF 100%) repeat scroll 0 0 transparent;
+    height:183px;
+    margin-top:80px;
+	
+	h4 {
+    	color: lighten(@std-gray, 20%);
+    	font: 18px~"/"18px ProximaNovaA-Bold;
+    	text-align: center;
+		}
+
+	.featured-img {
+    	margin: 0 15px;
+    	opacity: 0.5;
+    	height:63px;
+    	transition: transform 400ms ease 0s, opacity 400ms ease 0s;
+		&:hover {
+    		opacity: 1;
+    	}
+    }
+}
+
+.video {
+	position:relative;
+	width:860px;
+	margin:60px auto;
+}
+
+.gh-tab {
+	position:fixed;
+	right:0;
+	top:200px;
+	height:154px;
+	width:100px;
+	background-color:lighten(@std-gray, 70%);
+	z-index:300;
+	text-align:center;
+	border-top-left-radius:6px;
+	border-bottom-left-radius:6px;
+}
+
+.gh-buttons {
+	width:50px;
+	margin:0 auto;
+}

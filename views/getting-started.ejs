@@ -1,25 +1,24 @@
-<link rel="stylesheet" type="text/css" href="/stylesheets/github.css" />
-<script src="/javascripts/rainbow.min.js"></script>
+<%
+	title="Crypton.io | Getting Started"
+	currentBody="body-getting-started"
+	selected="selected"
+%>
 
-<div class="quest">
-  <h1>Getting Started</h1>
-  <div class="qbod">
-    <div class="qside">
-    </div>
-    <div class="qtext">
-      <p style="color: red;">
-        Crypton is not yet suitable for a production environment.
-      </p>
-      <p>
-        The following will guide you through setting up a Crypton
-        server for development. This guide assumes you are on Ubuntu 12.04,
-        though this is not required to run Crypton.
-      </p>
-      <p><strong>Dependencies</strong></p>
-      <p>
-        The Crypton server depends on PostgreSQL and Node.js v0.10.x.
-      </p>
-      <pre><code data-language="shell"># update apt
+<div class="wrapper no-bg">
+	<div class="container">
+		<div class="row">
+			<h1 class="smaller dark box col1 block">Getting Started</h1>
+			<h3 class="warning box col1">Crypton is not yet suitable for a production environment.</h3>
+			<div class="box block col1">
+				<p class="left">The following will guide you through setting up a Crypton server for development. This guide assumes you are on Ubuntu 12.04, though this is not required to run Crypton.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left box col1">
+				<h3 class="subheading">DEPENDENCIES</h3>
+				<p>The Crypton server depends on PostgreSQL and Node.js v0.10.x</p>
+
+				<pre class="examples"><code data-language="shell"># update apt
 sudo apt-get update
 
 # install postgres
@@ -32,13 +31,13 @@ sudo apt-get install git-core
 sudo apt-get install make g++ curl libssl-dev apache2-utils
 
 # install node.js
-wget http://nodejs.org/dist/v0.10.10/node-v0.10.10.tar.gz
-tar xzf node-v0.10.10.tar.gz
-cd node-v0.10.10
+wget http://nodejs.org/dist/latest/node-v0.10.18.tar.gz
+tar xzf node-v0.10.18.tar.gz
+cd node-v0.10.18
 ./configure
 make && sudo make install
 cd ..
-rm -rf node-v0.10.10*
+rm -rf node-v0.10.18*
 
 # get crypton
 git clone https://github.com/SpiderOak/crypton.git
@@ -49,26 +48,26 @@ make
 
 # setup the database
 cd integration_tests
-make setup-test-environment
-</code></pre>
-      <p><strong>Running the server</strong></p>
-      <pre><code data-language="shell">cd crypton/server
+make setup-test-environment</code></pre>
+
+				<h3 class="subheading">RUNNING THE SERVER</h3>
+				<pre class="examples"><code data-language="shell">cd crypton/server
 npm link
 which crypton # should be ./server.js
-NODE_ENV=test crypton
-</code></pre>
-      <p>To clean the database (remove all data):</p>
-      <pre><code data-language="shell">cd crypton/integration_tests
-make clean-test-db
-</code></pre>
-      <p><strong>Client compilation</strong></p>
-      <p>To generate the un- and minified versions of the client code:</p>
-      <pre><code data-language="shell">cd crypton/client
+NODE_ENV=test crypton</code></pre>
+
+				<p>To clean the database (remove all data):</p>
+
+				<pre class="examples"><code data-language="shell">cd crypton/integration_tests make clean-test-db</code></pre>
+
+				<h3 class="subheading">CLIENT COMPILATION</h3>
+				<p>To generate the un- and minified versions of the client code:</p>
+				<pre class="examples"><code data-language="shell">cd crypton/client
 ./compile.sh --once
 # crypton.js and crypton.min.js should now be in crypton/client/dist
-# if --once is left off, compile.sh recompile once a change in the client directory is detected
-</code></pre>
-    </div>
-  </div>
+# if --once is left off, compile.sh recompile once a change in the
+# client directory is detected</code></pre>
+			</div>
+		</div>
+	</div>
 </div>
-

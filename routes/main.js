@@ -11,8 +11,20 @@ module.exports = function (app) {
     res.render('developer-guide');
   });
 
+  app.get('/documentation', function (req, res) {
+    res.render('documentation');
+  });
+
+  app.get('/examples', function (req, res) {
+    res.render('examples');
+  });
+
   app.get('/docs', function (req, res) {
     res.render('getting-started');
+  });
+
+    app.get('/connect-with-crypton', function (req, res) {
+    res.render('connect');
   });
 
   app.get('/docs/accounts', function (req, res) {
@@ -22,4 +34,5 @@ module.exports = function (app) {
   app.get('/docs/containers', function (req, res) {
     res.render('docs/containers');
   });
+
 };

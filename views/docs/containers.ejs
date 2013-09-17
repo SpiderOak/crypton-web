@@ -1,56 +1,56 @@
-<link rel="stylesheet" type="text/css" href="/stylesheets/github.css" />
-<script src="/javascripts/rainbow.min.js"></script>
+<%
+  title="Crypton.io | Containers"
+  currentBody="body-docs"
+  selected=""
+%>
+<div class="wrapper no-bg">
+  <div class="container">
+    <div class="row">
+      <div class="box left col1 block">
+        <h2 class="dark left col1">Containers</h2>
+        <p>
+          Data in Crypton is treated as a traditional object database.
+          Containers are append-only stores that are transparently encrypted on the client side.</p>
+        <p>
+          Containers are identified by keys such as "diary" in the example below.
+          Any string is allowed. From the server's perspective, container names (and of course their contents) are unreadable.
+        </p>
+        <p>
+          If the data set is going to grow very large,
+          partitioning data across containers and
+          lazy loading them as you need them can help with app load time.
+          One simple tactic for partitioning data among containers
+          is to keep app metadata all in one container,
+          and keep bulky binary data (images, videos, long text strings, whatever)
+          in many other containers. Metadata is usually very small, and can load quickly.
+          For example, a diary app might have a single metadata container with a list of entries -
+          each containing an ID, title, date, keywords, and possibly other basic attributes.
+          Each entry body would be stored as a separate container
+          and loaded via a reference from the metadata container.
+        </p>
 
-<div class="quest">
-  <h1>Containers</h1>
-  <div class="qbod">
-    <div class="qside">
-    </div>
-    <div class="qtext">
-      <p>
-        Data in Crypton is treated as a traditional object database.
-        Containers are append-only stores that are transparently encrypted on the client side.</p>
-      <p>
-        Containers are identified by keys such as "diary" in the example below.
-        Any string is allowed. From the server's perspective, container names (and of course their contents) are unreadable.
-      </p>
-      <p>
-        If the data set is going to grow very large,
-        partitioning data across containers and
-        lazy loading them as you need them can help with app load time.
-        One simple tactic for partitioning data among containers
-        is to keep app metadata all in one container,
-        and keep bulky binary data (images, videos, long text strings, whatever)
-        in many other containers. Metadata is usually very small, and can load quickly.
-        For example, a diary app might have a single metadata container with a list of entries -
-        each containing an ID, title, date, keywords, and possibly other basic attributes.
-        Each entry body would be stored as a separate container
-        and loaded via a reference from the metadata container.
-      </p>
-
-      <p><strong>session.load(containerName, callback)</strong></p>
-      <p>
-        If not cached on the client, this method will ask the server for
-        all container records for the given <code>containerName</code>.
-        If the current session's account is allowed access to this data,
-        it is sent to the client and decrypted.
-        After decryption, all records (differences between versions of said container)
-        are used to rebuild the container state. This is done transparently.
-      </p>
-      <pre><code data-language="javascript">session.load('diary', function (err, diary) {
+        <p><strong>session.load(containerName, callback)</strong></p>
+        <p>
+          If not cached on the client, this method will ask the server for
+          all container records for the given <code>containerName</code>.
+          If the current session's account is allowed access to this data,
+          it is sent to the client and decrypted.
+          After decryption, all records (differences between versions of said container)
+          are used to rebuild the container state. This is done transparently.
+        </p>
+        <pre class="examples"><code data-language="javascript">session.load('diary', function (err, diary) {
   // diary is a container, specific to the current account
   window.diary = diary;
-});
-</code></pre>
+});</code></pre>
 
-      <p><strong>session.create(containerName, callback)</strong></p>
-      <p>
-        <code>session.load</code> will callback with an error
-        if the given <code>containerName</code> does not exist.
-        <code>session.create</code> will create a blank container
-        and save its initial state to the server.
-      </p>
-      <pre><code data-language="javascript">session.load('diary', function (err, container) {
+        <p><strong>session.create(containerName, callback)</strong></p>
+        <p>
+          <code>session.load</code> will callback with an error
+          if the given <code>containerName</code> does not exist.
+          <code>session.create</code> will create a blank container
+          and save its initial state to the server.
+        </p>
+      <pre class="examples"><code data-language="javascript">session.load('diary', function (err, container) {
   if (err) {
     session.create('diary', function (err, container) {
       window.diary = container;
@@ -61,18 +61,16 @@
 
   window.diary = container;
   doSomethingWithContainer();
-});
-</code></pre>
+});</code></pre>
 
       <p><strong>container.add(key, callback)</strong></p>
       <p>
         Add an empty object to said container at <code>key</code>.
         Will callback with an error if <code>key</code> already exists.
       </p>
-      <pre><code data-language="javascript">diary.add('entries', function () {
+      <pre class="examples"><code data-language="javascript">diary.add('entries', function () {
   // diary now has an entries object
-});
-</code></pre>
+});</code></pre>
 
       <p><strong>container.get(key, callback)</strong></p>
       <p>
@@ -85,7 +83,7 @@
         (object, array, string, number).
         Binary data is not yet supported (but you may encode it to a string).
       </p>
-      <pre><code data-language="javascript">diary.add('entries', function () {
+      <pre class="examples"><code data-language="javascript">diary.add('entries', function () {
   // saves an error check below
   // worst case scenario: key already exists and will not be overwritten
   diary.get('entries', function (err, entries) {
@@ -94,15 +92,14 @@
     // will overwrite its reference to the container
     // (for example, saying window.entries = {} later will not affect the object itself)
   });
-});
-</code></pre>
+});</code></pre>
 
       <p><strong>container.save(callback)</strong></p>
       <p>
         Looks at the container's objects for changes since its last known version,
         creates a delta, encrypts the delta, and saves it to the server.
       </p>
-      <pre><code data-language="javascript">var id = entries.length;
+      <pre class="examples"><code data-language="javascript">var id = entries.length;
 
 var newEntry = {
   id: id,
@@ -118,14 +115,13 @@ entries.save(function (err) {
   }
 
   // update UI
-});
-</code></pre>
+});</code></pre>
       <p>
         Let's add some more content to this entry.
         We'll store the text content separately from the metadata,
         in its own one-off container.
       </p>
-      <pre><code data-language="javascript">var text = 'Dear diary,\n\n
+      <pre class="examples"><code data-language="javascript">var text = 'Dear diary,\n\n
 Today, I transparently encrypted data with Crypton and it was dreamy.';
 var textContainerName = 'entry:' + id;
 
@@ -144,63 +140,9 @@ session.create(textContainerName, function (err, textContainer) {
       });
     });
   });
-});
-</code></pre>
+});</code></pre>
+      </div>
     </div>
   </div>
 </div>
 
-<!--
-<div class="quest">
-    <h1>Sharing</h1>
-    <div class="qbod">
-        <div class="qside">
-        </div>
-        <div class="qtext">
-            <p>Most web applications involve sharing data between people or computers (that's what the Internet is for!).</p>
-            <p>Crypton allows the cryptographically secure sharing of containers between users.</p>
-            <p>Sharing is somewhat unapplicable to a diary application, so we will demostrate something more generic. Let's say Bob wants to share a secret with his colleague Alice. He would start by grabbing her peer object:</p>
-
-            <p><strong>session.getPeer(username, callback)</p></strong>
-            <pre><code data-language="javascript">session.getPeer('alice', function (err, alice) {
-if (err) {
-alert('Peer alice not available');
-}
-});
-</code></pre>
-
-            <p><strong>container.share(peer, callback)</p></strong>
-            <p>Shares an entire container to given <code>peer</code>. Shares imply reads only, not writes.</p>
-            <pre><code data-language="javascript">container.share(alice, function (err) {
-// alice will be able to read the historical and current state of all objects in
-// this container as they are updated and changed until it is deleted or unshared.
-});
-</code></pre>
-
-            <p><strong>container.unshare(peer, callback)</p></strong>
-            <p>Remove a peer's or all peers' ability to access the container.</p>
-            <pre><code data-language="javascript">// just remove alice
-container.unshare(alice);
-
-// remove all sharing with all peers
-container.unshare();
-
-// still have to check for conflicts/retry, even
-// though you're not changing any data.
-container.save();
-</code></pre>
-
-            <p>Peer objects function like sessions. For example, this is how Alice will retreive the data sent from Bob:</p>
-            <pre><code data-language="javascript">// from alice's session
-session.getPeer('bob', function (err, bob) {
-  bob.load('secretMaps', function (err, bobsSecretMaps) {
-    bobsSecretMaps.get('pirateIsland', function (err, pirateIsland) {
-      sailTo(pirateIsland);
-    });
-  });
-});
-</code></pre>
-        </div>
-    </div>
-</div>
--->

@@ -1,0 +1,11 @@
+body.index {
+  background: url('../images/background.png');
+}
+h1 {
+  font: 68px/39px ProximaNovaA-Bold;
+  color: #ffffff;
+}
+h2 {
+  font: 34px/39px ProximaNovaA-Bold;
+  color: #ffffff;
+}
