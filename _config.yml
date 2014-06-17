@@ -1,0 +1,4 @@
+name: Crypton
+markdown: redcarpet
+pygments: true
+baseurl: /
