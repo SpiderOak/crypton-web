@@ -9,8 +9,8 @@ body {
 .navbar-nav > li > a {
   color: #fff;
   font-size: 1.3em;
-  padding: 20px;
-  margin: 20px 0 0 20px;
+  padding: 20px 15px;
+  margin: 20px 0 0 15px;
   border-bottom: 2px solid transparent;
   transition: all 0.1s ease;
 }
@@ -20,15 +20,28 @@ body {
   border-bottom-color: #fff;
 }
 
-.header-hero {
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.navbar-toggle {
+  padding: 40px;
+}
 
+.icon-bar {
+  background: #fff;
+}
+
+.navbar-collapse {
+  box-shadow: none;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.in {
+  overflow-y: hidden;
+  float: none !important;
+  padding-bottom: 0;
+}
+
+.header-hero {
   color: #fff;
+  background: url(/images/bg-pattern-hero.jpg);
 }
 
 .hero-unit .btn {
@@ -64,6 +77,15 @@ body {
   padding: 50px 0;
 }
 
+.hero-unit.step {
+  color: #fff;
+  background: url(/images/bg-pattern-steps.jpg);
+}
+
+.hero-unit.step .dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .hero-unit.tight {
   padding-bottom: 0;
 }
@@ -73,22 +95,28 @@ body {
 }
 
 .hero-unit h1 {
+  margin-top: 0;
   font-family: 'HelveticaNeue-Light';
+  font-size: 3.8em;
 }
 
 .hero-unit .subheader {
-  font-size: 1.5em;
-  line-height: 1.6em;
+  font-size: 1.7em;
+  line-height: 1.7em;
+}
+
+.hero-unit .subheader2 {
+  font-size: 1.4em;
+  line-height: 1.7em;
 }
 
 .big-icons {
-  font-size: 3em;
-  margin: 15px 0 -15px;
+  font-size: 4em;
   opacity: 0.3;
 }
 
-.hero-unit.step {
-  color: #fff;
+h1#why-use-crypton {
+  font-size: 2.3em;
 }
 
 h1#how-crypton-works {
@@ -106,12 +134,13 @@ h1#how-crypton-works {
 .work-step-title {
   color: #fff;
   font-size: 30px;
-  margin: 10px 0;
+  margin: 0 0 10px;
 }
 
 .work-step-description {
   color: #fff;
   font-size: 16px;
+  line-height: 1.5em;
 }
 
 .work-step-code {
@@ -133,20 +162,25 @@ h1#how-crypton-works {
 
 .work-step-image {
   max-height: 375px;
+  max-width: 100%;
 }
 
 .vertical-center {
-  float: none;
-  display: table-cell;
-  vertical-align: middle;
+  padding: 100px 20px;
 }
 
 .notification-hero {
   color: #fff;
+  background: url(/images/bg-pattern-hero.jpg);
 }
 
 .notification-hero h1 {
-  font-size: 40px;
+  font-size: 3.4em;
+  line-height: 1.3em;
+  padding-bottom: 30px;
+}
+
+#notification-form {
   padding-bottom: 30px;
 }
 
@@ -188,6 +222,18 @@ h1#how-crypton-works {
 
 .footer a {
   font-weight: bold;
+}
+
+.footer a i {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  position: relative;
+  top: 5px;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 .footer .pull-right span {
