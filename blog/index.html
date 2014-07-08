@@ -1,14 +1,19 @@
-{% include head.html %}
+---
+layout: default
+title: Blog
+---
 
   <div class="row text-center">
     <div class="col-lg-8 col-lg-offset-2">
-      <h1>Documentation</h1>
+      <h1>Crypton Blog</h1>
       <p class="desc">
         Fusce turpis eros, posuere sed semper id, condimentum ac urna. Nullam scelerisque risus ligula, vitae elementum nulla ultrices et.
       </p>
     </div>
   </div>
 
-  {{ content }}
-
-{% include foot.html %}
+{% for post in site.posts %}
+  {% if post.categories contains 'blog' %}
+    {% include post_summary.html post=post %}
+  {% endif %}
+{% endfor %}

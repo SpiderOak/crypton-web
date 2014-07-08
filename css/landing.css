@@ -39,6 +39,21 @@ body {
   padding-bottom: 0;
 }
 
+.in .navbar-nav > li > a,
+.collapsing .navbar-nav > li > a {
+  padding: 15px 30px 15px 25px;
+  border: 0;
+  border-left: 5px solid transparent;
+  margin: 0;
+}
+
+.in .navbar-nav > li > a.active,
+.in .navbar-nav > li > a:hover,
+.collapsing .navbar-nav > li > a.active,
+.collapsing .navbar-nav > li > a:hover {
+  border-left-color: #fff;
+}
+
 .header-hero {
   color: #fff;
   background: url(/images/bg-pattern-hero.jpg);
@@ -216,7 +231,8 @@ h1#how-crypton-works {
 
 .footer {
   border-top: 1px solid #dbdbdb;
-  padding: 30px 0;
+  height: 80px;
+  line-height: 80px;
   opacity: 0.9;
 }
 

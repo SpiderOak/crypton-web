@@ -4,7 +4,7 @@ $().ready(function () {
 
   $(window).scroll(function () {
     $rows.each(function () {
-      var a = $(this).offset().top + $(this).height();
+      var a = $(this).offset().top + ($(this).height() / 2);
       var b = $(window).scrollTop() + $(window).height();
       if (a < b) {
         $(this).fadeTo(250, 1);
