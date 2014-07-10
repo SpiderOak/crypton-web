@@ -1,5 +1,6 @@
 {% include head.html %}
 
+<!--
   <div class="row text-center">
     <div class="col-lg-8 col-lg-offset-2">
       <h1>Documentation</h1>
@@ -8,7 +9,40 @@
       </p>
     </div>
   </div>
+-->
 
-  {{ content }}
+  <div class="row" id="docs">
+    <div class="col-lg-6 col-lg-offset-2 content">
+      {{ content }}
+    </div>
+
+    <div class="col-lg-3">
+      <div data-spy="affix" data-offset-top="100">
+        <ul class="nav">
+          <li class="active"><a href="/docs">Introduction</a></li>
+          <li><a href="/docs/installation.html">Installation</a></li>
+          <li><a href="/docs/getting-started.html">Getting Started</a></li>
+          <li><a href="https://github.com/SpiderOak/crypton/tree/master/client/examples" target="blank">Examples</a></li>
+          <li>
+            <span class="section">Concepts</span>
+            <ul class="nav">
+              <li><a href="/docs/concepts/accounts.html">Accounts</a></li>
+              <li><a href="/docs/concepts/sessions.html">Sessions</a></li>
+              <li><a href="/docs/concepts/containers.html">Containers</a></li>
+              <li><a href="/docs/concepts/containers.html">Inbox</a></li>
+              <li><a href="/docs/concepts/sharing.html">Sharing</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="section">Security</span>
+            <ul class="nav">
+              <li><a href="/docs/security/model.html">Model</a></li>
+              <li><a href="/docs/security/audits.html">Audits</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 {% include foot.html %}
