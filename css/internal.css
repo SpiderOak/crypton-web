@@ -1,5 +1,8 @@
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue';
+  border-top: 3px solid #000;
 }
 
 .navbar {
@@ -94,13 +97,12 @@ body {
 }
 
 h1 {
-  font-family: 'HelveticaNeue-light';
+  font-weight: light;
   font-size: 3.2em;
   margin: 10px 0 30px;
 }
 
 h2 {
-  font-family: 'HelveticaNeue-light';
 }
 
 p {
@@ -126,7 +128,6 @@ p.desc {
 
 .post .title a {
   font-size: 2.5em;
-  font-family: 'HelveticaNeue-light';
   color: #000;
   opacity: 0.8;
 }

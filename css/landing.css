@@ -1,5 +1,12 @@
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue';
+  border-top: 3px solid #000;
+}
+
+.container {
+  max-width: 720px;
 }
 
 .navbar-brand img {
@@ -7,7 +14,7 @@ body {
 }
 
 .navbar-nav > li > a {
-  color: #fff;
+  color: #000;
   font-size: 1.3em;
   padding: 20px 15px;
   margin: 20px 0 0 15px;
@@ -17,7 +24,7 @@ body {
 
 .navbar-nav > li > a:hover {
   background: none;
-  border-bottom-color: #fff;
+  border-bottom-color: #000;
 }
 
 .navbar-toggle {
@@ -25,7 +32,7 @@ body {
 }
 
 .icon-bar {
-  background: #fff;
+  background: #000;
 }
 
 .navbar-collapse {
@@ -51,17 +58,22 @@ body {
 .in .navbar-nav > li > a:hover,
 .collapsing .navbar-nav > li > a.active,
 .collapsing .navbar-nav > li > a:hover {
-  border-left-color: #fff;
+  border-left-color: #000;
 }
 
-.header-hero {
-  color: #fff;
-  background: url(/images/bg-pattern-hero.jpg);
+.header-hero h1 {
+  padding-top: 30px;
+}
+
+h1,
+h2 {
+  font-weight: 300;
 }
 
 .hero-unit .btn {
-  border-radius: 0;
-  border-color: transparent;
+  border-color: #000;
+  border-width: 2px;
+  color: #000;
   padding: 10px 25px;
   margin: 10px;
   font-size: 1.2em;
@@ -69,27 +81,23 @@ body {
 }
 
 .hero-unit .btn-primary {
-  background: #34738c;
+  background: #fff;
 }
 
 .hero-unit .btn-primary:hover {
-  background: #336b80;
+  background: #000;
+  color: #fff;
 }
 
 .hero-unit .btn-default {
-  color: #fff;
-  background: #252c2e;
-  border-color: #fff;
 }
 
 .hero-unit .btn-default:hover {
-  background: #fff;
-  color: #252c2e;
 }
 
 .hero-unit {
   text-align: center;
-  padding: 50px 0;
+  padding: 0;
 }
 
 .hero-unit.step {
@@ -111,7 +119,6 @@ body {
 
 .hero-unit h1 {
   margin-top: 0;
-  font-family: 'HelveticaNeue-Light';
   font-size: 3.8em;
 }
 
@@ -123,11 +130,12 @@ body {
 .hero-unit .subheader2 {
   font-size: 1.4em;
   line-height: 1.7em;
+  text-align: justify;
 }
 
 .big-icons {
   font-size: 4em;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 h1#why-use-crypton {
@@ -202,7 +210,7 @@ h1#how-crypton-works {
 #notification-form input {
   outline: 0;
   border: 0;
-  font-family: 'HelveticaNeue';
+  font-family: 'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
 }
 
@@ -230,14 +238,14 @@ h1#how-crypton-works {
 }
 
 .footer {
-  border-top: 1px solid #dbdbdb;
   height: 80px;
   line-height: 80px;
   opacity: 0.9;
 }
 
 .footer a {
-  font-weight: bold;
+  font-weight: 500;
+  color: #000;
 }
 
 .footer a i {
@@ -248,8 +256,7 @@ h1#how-crypton-works {
 }
 
 .footer a:hover {
-  text-decoration: none;
-  color: #000;
+  text-decoration: underline;
 }
 
 .footer .pull-right span {
