@@ -96,28 +96,9 @@ h2 {
   color: #fff;
 }
 
-.hero-unit .btn-default {
-}
-
-.hero-unit .btn-default:hover {
-}
-
 .hero-unit {
   text-align: center;
   padding: 0;
-}
-
-.hero-unit.step {
-  color: #fff;
-  background: url(/images/bg-pattern-steps.jpg);
-}
-
-.hero-unit.step .dark {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.hero-unit.tight {
-  padding-bottom: 0;
 }
 
 .hero-unit p {
@@ -143,7 +124,7 @@ h2 {
 
 .big-icons {
   font-size: 3em;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .featured a {
@@ -151,7 +132,7 @@ h2 {
 }
 
 .featured a img {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .featured a:hover img {
