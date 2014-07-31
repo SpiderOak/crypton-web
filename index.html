@@ -7,7 +7,7 @@
   <title>Crypton</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/fonts.css" rel="stylesheet">
-  <link href="css/landing.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
 </head>
 <body role="document">
   <div class="header-hero">
@@ -20,14 +20,15 @@
             <span class="icon-bar"><!-- --></span>
             <span class="icon-bar"><!-- --></span>
           </button>
-          <a class="navbar-brand" href="/"><img src="images/crypton.png" alt="Crypton" /></a>
+          <a class="navbar-brand" href="/">
+            <img src="images/crypton-inverted.png" alt="Crypton" />
+          </a>
         </div>
         <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="/docs">Documentation</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/features">Features</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="docs">Documentation</a></li>
           </ul>
         </div>
       </div>
@@ -37,120 +38,23 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Easily build 100% private, <br /> cryptographically secure web applications</h1>
-            <p class="subheader">without ever having to know or understand the complications of encryption</p>
+            <h1>Build private applications</h1>
+            <p class="subheader">Zero knowledge without knowing cryptography</p>
             <p>
-              <a href="#signup" class="btn btn-primary btn-large">Sign up for free</a>
-              <a href="#how-crypton-works" class="btn btn-default btn-large">How it works</a>
+              <a href="/docs" class="btn btn-primary btn-large">Learn</a>
+              <a href="/docs/installation.html" class="btn btn-primary btn-large">Install</a>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
             <p class="big-icons">
               <span class="icon icon-hand-block"><!-- --></span>
-              <span class="icon icon-lock-3"><!-- --></span>
               <span class="icon icon-preview-2"><!-- --></span>
+              <span class="icon icon-lock-3"><!-- --></span>
               <span class="icon icon-key-2"><!-- --></span>
               <span class="icon icon-safe-1"><!-- --></span>
             </p>
-          <h1 id="why-use-crypton">Why use Crypton?</h1>
-          <p class="subheader2">Privacy. In today's world of lorizzle ipsizzle dolizzle yo mamma amizzle, gangsta adipiscing elit. Nullizzle sizzle velizzle, fizzle volutpizzle, crunk da bomb, gravida vizzle, arcu. Pellentesque uhuh ... yih! tortor. Black erizzle. Fusce break yo neck, yall dolizzle dapibus turpis tempus you son of a bizzle. Break yo neck, yall pellentesque nibh et turpizzle. Ghetto fo shizzle things.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit step tight">
-    <div class="container">
-      <div class="row">
-        <h1 id="how-crypton-works">How Crypton works</h1>
-        <div class="col-lg-5 col-md-5 text-left vertical-center">
-          <div class="work-step-counter">Step 1</div>
-          <div class="work-step-title">Install Crypton</div>
-          <div class="work-step-description">To get started begin by installing Crypton locally via npm, the Node.js package manager</div>
-          <pre class="work-step-code">npm install -g crypton
-crypton demo</pre>
-        </div>
-        <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 text-center">
-          <script type="text/javascript" src="https://asciinema.org/a/10.js" id="asciicast-10"></script>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit step tight dark">
-    <div class="dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 text-center">
-            <img class="work-step-image" src="images/crypton-animation-step-2.gif" alt="" />
+            <p class="subheader2">
+              Crypton is a JavaScript framework for building applications where the server doesn't know the contents it's storing on behalf of users. It hides the complexity of its encryption model from developers, it is fast, and it aims to be pleasant to work with. Crypton exists to build applications where users aren't required to trust the developer with their data.
+            </p>
           </div>
-          <div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 text-left vertical-center">
-            <div class="work-step-counter">Step 2</div>
-            <div class="work-step-title">Develop application</div>
-            <div class="work-step-description">The developer writes the application with HTML, CSS &amp; JavaScript and can test it in the browser at any time. The development process is similar to any web page development.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit step tight">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-5 text-left vertical-center">
-          <div class="work-step-counter">Step 3</div>
-          <div class="work-step-title">Deploy application</div>
-          <div class="work-step-description">The developer deploys the app to multiple targets (Android, iOS &amp; browser extensions). The deployed app talks to the Crypton server over HTTPS.</div>
-        </div>
-        <div class="col-lg-6 col-lg-offset-1 col-mg-6 col-md-offset-1 text-center">
-          <img class="work-step-image" src="images/crypton-animation-step-3.gif" alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit notification-hero">
-    <a id="signup"></a>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Sign up to get notified when Crypton accounts are available</h1>
-          <form id="notification-form" action="" method="post">
-            <input type="email" placeholder="Enter your email address..." />
-            <input type="submit" class="btn btn-primary btn-large" value="Join now" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-unit">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 featured">
-          <a href="http://www.wired.com/2013/03/crypton/" target="blank">
-            <img src="images/wired-logo.png" alt="Crypton in Wired" />
-          </a>
-          <a href="http://www.cso.com.au/article/522058/open-source_project_crypton_seeks_make_encryption_easier/" target="blank">
-            <img src="images/cso-logo.png" alt="Crypton in CSO" />
-          </a>
-          <a href="http://www.computerweekly.com/blogs/open-source-insider/2013/07/crypton-open-source-project-to-thwart-online-surveillance.html" target="blank">
-            <img src="images/cw-logo.png" alt="Crypton in ComputerWeekly" />
-          </a>
-          <a href="https://www.pcworld.com/article/2045274/opensource-project-crypton-seeks-to-make-encryption-easier.html" target="blank">
-            <img src="images/pcw-logo.png" alt="Crypton in PCWorld" />
-          </a>
-          <a href="http://www.darkreading.com/risk-management/spideroak-takes-novel-approach-to-data-privacy/d/d-id/1111011?" target="blank">
-            <img src="images/iw-logo.png" alt="Crypton in InformationWeek" />
-          </a>
         </div>
       </div>
     </div>
@@ -160,15 +64,21 @@ crypton demo</pre>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <span>Copyright &copy; 2014 Crypton</span>
-          <div class="pull-right">
-            <span>Created by <a href="https://spideroak.com" target="blank">SpiderOak</a></span>
-            <span><a href="#">Privacy</a></span>
-            <span><a href="#">Terms</a></span>
-            <span><a href="#">Jobs</a></span>
-            <span><a href="https://github.com/spideroak/crypton" target="blank"><i class="icon icon-social-github"><!-- --></i></a></span>
-            <span><a href="https://twitter.com/crypton_io" target="blank"><i class="icon icon-social-twitter"><!-- --></i></a></span>
-          </div>
+          <span>
+            <a href="https://spideroak.com" target="_blank">
+              <img src="/images/spideroak-small.png" width="18" alt="Created by SpiderOak" />
+            </a>
+          </span>
+          <span>
+            <a href="https://github.com/spideroak/crypton" target="_blank">
+              <i class="icon icon-social-github"><!-- --></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/crypton_io" target="_blank">
+              <i class="icon icon-social-tw"><!-- --></i>
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -176,6 +86,5 @@ crypton demo</pre>
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/landing.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <div class="row post">
-  <div class="col-lg-8 col-lg-offset-2">
+  <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
     <div class="title">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </div>
@@ -8,13 +8,13 @@
       <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
       by
       <span class="author">
-        <a href="/blog/authors/{{ post.author }}.html">{{ site.data.authors[post.author].name }}</a>
+        <a href="https://twitter.com/{{ site.data.authors[post.author].twitter }}" target="_blank">{{ site.data.authors[post.author].name }}</a>
       </span>
     </div>
 
-    <div class="entry">
-      {{ post.content | strip_html | truncatewords: 100 }}
-    </div>
+    <p class="entry">
+      {{ post.content | strip_html | truncatewords: 50 }}
+    </p>
 
     <a class="more" href="{{ post.url }}">Read more &rarr;</a>
   </div>
