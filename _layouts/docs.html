@@ -1,25 +1,10 @@
 {% include head.html %}
 
-<!--
-  <div class="row text-center">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h1>Documentation</h1>
-      <p class="desc">
-        Fusce turpis eros, posuere sed semper id, condimentum ac urna. Nullam scelerisque risus ligula, vitae elementum nulla ultrices et.
-      </p>
-    </div>
-  </div>
--->
-
   <div class="row" id="docs">
-    <div class="col-lg-6 col-lg-offset-2 content">
-      {{ content }}
-    </div>
-
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-3 col-sm-3 pull-right">
       <div data-spy="affix" data-offset-top="100">
         <ul class="nav">
-          <li class="active"><a href="/docs">Introduction</a></li>
+          <li><a href="/docs">Introduction</a></li>
           <li><a href="/docs/installation.html">Installation</a></li>
           <li><a href="/docs/getting-started.html">Getting Started</a></li>
           <li><a href="https://github.com/SpiderOak/crypton/tree/master/client/examples" target="blank">Examples</a></li>
@@ -43,6 +28,11 @@
         </ul>
       </div>
     </div>
+
+    <div class="col-lg-9 col-md-9 col-sm-9 content text-justify pull-left">
+      {{ content }}
+    </div>
+
   </div>
 
 {% include foot.html %}

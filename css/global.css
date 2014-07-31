@@ -5,6 +5,13 @@ body {
   border-top: 3px solid #000;
 }
 
+a,
+a:active,
+a:visited,
+a:hover {
+  color: #000;
+}
+
 .container {
   max-width: 720px;
 }
@@ -131,98 +138,12 @@ h2 {
   font-size: 1.4em;
   line-height: 1.7em;
   text-align: justify;
+  padding-top: 0;
 }
 
 .big-icons {
-  font-size: 4em;
+  font-size: 3em;
   opacity: 0.7;
-}
-
-h1#why-use-crypton {
-  font-size: 2.3em;
-}
-
-h1#how-crypton-works {
-  margin-bottom: 50px;
-  color: #fff;
-  font-size: 44px;
-}
-
-.work-step-counter {
-  color: #a9b2b5;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.work-step-title {
-  color: #fff;
-  font-size: 30px;
-  margin: 0 0 10px;
-}
-
-.work-step-description {
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-.work-step-code {
-  color: #fff;
-  font-size: 16px;
-  font-family: monospace;
-  background: #111;
-  opacity: 0.8;
-  border-radius: 0;
-  border: 0;
-  margin-top: 20px;
-}
-
-.asciicast {
-  padding: 0 !important;
-  margin: 0 !important;
-  height: 375px;
-}
-
-.work-step-image {
-  max-height: 375px;
-  max-width: 100%;
-}
-
-.vertical-center {
-  padding: 100px 20px;
-}
-
-.notification-hero {
-  color: #fff;
-  background: url(/images/bg-pattern-hero.jpg);
-}
-
-.notification-hero h1 {
-  font-size: 3.4em;
-  line-height: 1.3em;
-  padding-bottom: 30px;
-}
-
-#notification-form {
-  padding-bottom: 30px;
-}
-
-#notification-form input {
-  outline: 0;
-  border: 0;
-  font-family: 'Helvetica Neue';
-  -webkit-font-smoothing: antialiased;
-}
-
-#notification-form input[type="email"] {
-  padding: 11px 20px;
-  width: 300px;
-  color: #000;
-  font-size: 16px;
-}
-
-#notification-form input[type="submit"] {
-  margin: -5px 0 0 -4px;
 }
 
 .featured a {
@@ -241,24 +162,126 @@ h1#how-crypton-works {
   height: 80px;
   line-height: 80px;
   opacity: 0.9;
+  text-align: center;
 }
 
 .footer a {
   font-weight: 500;
   color: #000;
+  text-decoration: none;
 }
 
 .footer a i {
   font-size: 1.5em;
   line-height: 1.5em;
   position: relative;
-  top: 5px;
+  top: 6px;
 }
 
 .footer a:hover {
-  text-decoration: underline;
 }
 
-.footer .pull-right span {
+.footer span {
   margin-left: 15px;
 }
+
+p {
+  opacity: 0.9;
+  margin: 20px 0;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+p.entry {
+  margin: 10px 0;
+}
+
+p.desc {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.post > div {
+  padding: 50px 0;
+  text-align: justify;
+}
+
+.post .title a {
+  font-size: 2.5em;
+  color: #000;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.post .meta {
+  font-size: 1.1em;
+  padding: 5px 0 10px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.post .more {
+  display: inline-block;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#docs {
+  margin: 30px 0;
+}
+
+#docs .affix {
+  top: 35px;
+}
+
+#docs .nav {
+  width: 150px;
+}
+
+#docs .nav .section {
+  display: block;
+  font-weight: 500;
+  padding: 10px 0 3px 17px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+#docs .content {
+  margin-top: -15px;
+}
+
+#docs .nav li a {
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 3px 5px 3px 15px;
+  border-left: 2px solid transparent;
+  margin-top: 4px;
+}
+
+#docs .nav li ul li a {
+  padding-left: 30px;
+  font-weight: 500;
+}
+
+#docs .nav li.active a,
+#docs .nav li a:hover {
+  background: none;
+  border-left-color: #000;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  #docs {
+    margin: 0;
+  }
+
+  #docs .pull-right {
+    float: left !important;
+    padding: 0 0 30px;;
+  }
+
+  #docs .affix {
+    position: static;
+  }
+}
+

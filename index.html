@@ -7,7 +7,7 @@
   <title>Crypton</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/fonts.css" rel="stylesheet">
-  <link href="css/landing.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
 </head>
 <body role="document">
   <div class="header-hero">
@@ -20,13 +20,15 @@
             <span class="icon-bar"><!-- --></span>
             <span class="icon-bar"><!-- --></span>
           </button>
-          <a class="navbar-brand" href="/"><img src="images/crypton-inverted.png" alt="Crypton" /></a>
+          <a class="navbar-brand" href="/">
+            <img src="images/crypton-inverted.png" alt="Crypton" />
+          </a>
         </div>
         <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/docs">Documentation</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="docs">Documentation</a></li>
           </ul>
         </div>
       </div>
@@ -37,7 +39,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Build private applications</h1>
-            <p class="subheader">Zero knowledge without knowing encryption</p>
+            <p class="subheader">Zero knowledge without knowing cryptography</p>
             <p>
               <a href="/docs" class="btn btn-primary btn-large">Learn</a>
               <a href="/docs/installation.html" class="btn btn-primary btn-large">Install</a>
@@ -50,7 +52,7 @@
               <span class="icon icon-safe-1"><!-- --></span>
             </p>
             <p class="subheader2">
-              Crypton is a JavaScript framework for building applications where the server doesn't know the contents it's storing on behalf of users. It hides the complexity of its encryption model from developers, it is fast, and it aims to be pleasant to work with. Crypton exists to build applications where users aren't required to trust you with their data.
+              Crypton is a JavaScript framework for building applications where the server doesn't know the contents it's storing on behalf of users. It hides the complexity of its encryption model from developers, it is fast, and it aims to be pleasant to work with. Crypton exists to build applications where users aren't required to trust the developer with their data.
             </p>
           </div>
         </div>
@@ -62,15 +64,21 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <span>Copyright &copy; 2014 Crypton</span>
-          <div class="pull-right">
-            <span>Created by <a href="https://spideroak.com" target="blank">SpiderOak</a></span>
-            <span><a href="#">Privacy</a></span>
-            <span><a href="#">Terms</a></span>
-            <span><a href="#">Jobs</a></span>
-            <span><a href="https://github.com/spideroak/crypton" target="blank"><i class="icon icon-social-github"><!-- --></i></a></span>
-            <span><a href="https://twitter.com/crypton_io" target="blank"><i class="icon icon-social-twitter"><!-- --></i></a></span>
-          </div>
+          <span>
+            <a href="https://spideroak.com" target="_blank">
+              <img src="/images/spideroak-small.png" width="18" alt="Created by SpiderOak" />
+            </a>
+          </span>
+          <span>
+            <a href="https://github.com/spideroak/crypton" target="_blank">
+              <i class="icon icon-social-github"><!-- --></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/crypton_io" target="_blank">
+              <i class="icon icon-social-tw"><!-- --></i>
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -78,6 +86,5 @@
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <!--<script src="/js/landing.js"></script>-->
 </body>
 </html>
