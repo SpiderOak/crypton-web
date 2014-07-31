@@ -6,7 +6,9 @@
         <span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
         by
         <span class="author">
-          <a href="/blog/authors/{{ page.author }}.html">{{ site.data.authors[page.author].name }}</a>
+          <a href="https://twitter.com/{{ site.data.authors[page.author].twitter }}" target="_blank">
+            {{ site.data.authors[page.author].name }}
+          </a>
         </span>
       </p>
     </div>

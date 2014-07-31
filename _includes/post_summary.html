@@ -8,7 +8,9 @@
       <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
       by
       <span class="author">
-        <a href="https://twitter.com/{{ site.data.authors[post.author].twitter }}" target="_blank">{{ site.data.authors[post.author].name }}</a>
+          <a href="https://twitter.com/{{ site.data.authors[post.author].twitter }}" target="_blank">
+            {{ site.data.authors[post.author].name }}
+          </a>
       </span>
     </div>
 
