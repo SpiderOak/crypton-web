@@ -11,8 +11,6 @@ Other than being developed completely on the client, Crypton makes no assumption
 
 There is a problem with doing cryptography in a web browser, where an end user cannot (or will not) verify the entirety of code sent to them upon loading a page - a service operator can therefore inject malicious code into a previously verified page. Because of this, we can only recommend Crypton for use in packaged applications, such as with Cordova or node-webkit. For more information, see our [security model](/docs/security/model.html).
 
-<p style="color: red;">
-  Though we have undergone two audits, Crypton is not ready for use with sensitive data. Use at your own risk.
-</p>
+Though we have undergone [two audits](/docs/security/audits.html), Crypton has changed in the meantime and we are waiting to begin a supplementary audit on the latest code. Use at your own risk.
 
 [Get started &rarr;](/docs/getting-started.html)
