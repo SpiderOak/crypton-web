@@ -3,7 +3,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Helvetica Neue';
   border-top: 3px solid #000;
-  color: #444;
+  color: #111;
 }
 
 a,
@@ -11,6 +11,12 @@ a:active,
 a:visited,
 a:hover {
   color: #000;
+  border-bottom: 1px solid #000;
+}
+
+a:hover {
+  border-bottom: 2px solid #000;
+  text-decoration: none;
 }
 
 img {
@@ -19,6 +25,11 @@ img {
 
 .container {
   max-width: 720px;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  border-bottom: none;
 }
 
 .navbar-brand img {
@@ -134,6 +145,7 @@ h2 {
 
 .featured a {
   text-decoration: none;
+  border: none;
 }
 
 .featured a img {
@@ -155,6 +167,7 @@ h2 {
   font-weight: 500;
   color: #000;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .footer a i {
@@ -235,11 +248,18 @@ p.desc {
   margin-top: -15px;
 }
 
+#docs .content ul {
+  list-style-type: circle;
+  font-size: 1.1em;
+}
+
+
 #docs .nav li a {
   font-weight: 500;
   opacity: 0.8;
   padding: 3px 5px 3px 15px;
   border-left: 2px solid transparent;
+  border-bottom: none;
   margin-top: 4px;
 }
 
@@ -270,13 +290,16 @@ p.desc {
   }
 }
 
+code,
 .highlight pre {
   border: 0;
   background: none;
   padding: 15px 0;
 }
 
+code,
 .highlight code {
   background: none !important;
   padding: 0;
 }
+
