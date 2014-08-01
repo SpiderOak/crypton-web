@@ -115,7 +115,7 @@ Behind the scenes, Crypton is:
 
 * executing a [Transaction](/docs/concepts/transactions.html) to delete the message
 
-## Deleteing all messages
+## Deleting all messages
 
 ````javascript
 session.inbox.clear(
