@@ -39,7 +39,7 @@ Because the keyring is primarily wrapped with a password-derived key, it is impe
 
 ## Creating accounts
 
-Here is an exmaple of generating an account:
+Here is an example of generating an account:
 
 ````javascript
 var username = prompt('Username?');
