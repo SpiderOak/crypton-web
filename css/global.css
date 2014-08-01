@@ -206,6 +206,7 @@ p.desc {
 }
 
 .post .title a {
+  border-bottom: 0;
   font-size: 2.5em;
   color: #000;
   opacity: 0.8;
@@ -219,7 +220,12 @@ p.desc {
   opacity: 0.8;
 }
 
+.post .meta a {
+  border-bottom: 0;
+}
+
 .post .more {
+  border-bottom: 0;
   display: inline-block;
   margin: 10px 0;
 }
