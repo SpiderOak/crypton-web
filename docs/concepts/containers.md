@@ -9,9 +9,9 @@ Each account may have Containers which store data.
 
 ## Theory
 
-Containers are stored on the backend as incremental changes, internally called container records, similar to a git commit. Every delta between versions is stored encrypted with a per-container symmeric key, `containerSessionKey`. Container session keys are encrypted with their account's public key to create a `containerSessionKeyShare`.
+Containers are stored on the backend as incremental changes, internally called container records, similar to a git commit. Every delta between versions is stored encrypted with a per-container symmetric key, `containerSessionKey`. Container session keys are encrypted with their account's public key to create a `containerSessionKeyShare`.
 
-When interacting with the server, for example when requesting old container records, the container's name is with through an HMAC keyed by the account's `containerNameHmacKey`. This means the server doesn't know the plaintext name of the container.
+When interacting with the server, for example when requesting old container records, the container's name is put through an HMAC keyed by the account's `containerNameHmacKey`. This means the server doesn't know the plaintext name of the container.
 
 All container operations are executed through [Transactions](/docs/concepts/transactions.html).
 
