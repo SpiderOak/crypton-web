@@ -113,7 +113,7 @@ container.share(peer, function (err) {
 Behind the scenes, Crypton is:
 
 * encrypting the container's session key to the peer's public key
-* creating a [Message](/docs/concepts/messages.html) for the Peer
+* creating a [Message](/docs/concepts/messages.html) for the peer to inform them of this
 * saving these to the server with a [Transaction](/docs/concepts/transactions.html)
 
 [Get a peer &rarr;](/docs/concepts/peers.html)
