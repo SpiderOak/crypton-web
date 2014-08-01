@@ -15,3 +15,4 @@ There is a problem with doing cryptography in a web browser, where an end user c
   Though we have undergone two audits, Crypton is not ready for use with sensitive data. Use at your own risk.
 </p>
 
+[Get started &rarr;](/docs/getting-started.html)

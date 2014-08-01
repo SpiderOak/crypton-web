@@ -69,3 +69,5 @@ crypton-server
 ````
 
 and open your browser to [https://localhost:1025](https://localhost:1025)
+
+[Start learning about accounts &rarr;](/docs/concepts/accounts.html)
