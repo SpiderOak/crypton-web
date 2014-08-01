@@ -7,11 +7,11 @@ title: Audits
 
 Crypton has undergone two security audits. You can read about our philosophy regarding this [on the SpiderOak blog](https://blog.spideroak.com/20140220090004-responsibly-bringing-new-cryptography-product-market). It requires Crypton to:
 
-* be independently verifiable it must be open source
 * have a spec
 * have a threat model
 * have clear, well documented code
 * be audited by security professionals with a crypto background
+* to be independently verifiable it must be open source
 
 ## Least Authority audit
 
