@@ -18,7 +18,7 @@ title: About
       We believe in every user's right to privacy from all people, including service operators. This project is an attempt to democratize privacy in the context of application development.
     </p>
     <p>
-      In the past, the default application environment involved leaving plaintext information viewable by 3rd party servers. In many cases, this wasn't malicious - there simply hasn't been a simple option available. This has changed as Crypton now empowers companies and developers to realize zero knowledge environments out of the box. This is accomplished by transparently handling the complicated cryptography layers through Crypton and allowing companies to focus on domain specific challenges instead of figuring out how to push privacy and security after the fact.
+      In the past, the default application environment involved leaving plaintext information viewable by 3rd party servers. In many cases, this wasn't malicious - there simply hasn't been a simple option available. This has changed as Crypton now empowers companies and developers to realize zero knowledge environments out of the box. This is accomplished by transparently handling the complicated cryptography layers through Crypton and allowing developers to focus on domain specific challenges instead of figuring out how to push privacy and security after the fact.
     </p>
     <p>
       Many developers have previously been wary of the cloud as it once meant sacrificing privacy for convenience. But with Crypton, everyone can take full advantage of the cloud while enjoying the privacy and zero-knowledge that SpiderOak users have come to love.
