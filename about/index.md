@@ -7,7 +7,7 @@ title: About
   <div class="col-lg-12">
     <h1>About Crypton</h1>
     <p class="desc">
-      Fusce turpis eros, posuere sed semper id, condimentum ac urna. Nullam scelerisque risus ligula, vitae elementum nulla ultrices et. Curabitur consectetur sapien nec diam bibendum, eu ultrices lectus sollicitudin.
+      Crypton is an application framework and backend service that enables developers to build privacy-centered, scalable mobile and desktop applications without the requirement of extensive security or cryptography knowledge.
     </p>
   </div>
 </div>
@@ -15,10 +15,13 @@ title: About
 <div class="row">
   <div class="col-lg-12 text-justify">
     <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu magna et mauris vehicula suscipit. Morbi pulvinar risus non tellus lobortis, ac vulputate nisl egestas. Mauris justo ante, interdum eget quam nec, cursus aliquam ipsum. Curabitur justo arcu, varius a felis mattis, blandit ultrices ipsum. Donec id rhoncus massa, quis elementum ligula. Aenean ut imperdiet tortor, ut hendrerit nunc.
+      We believe in every user's right to privacy from all people, including service operators. This project is an attempt to democratize privacy in the context of application development.
     </p>
     <p>
-Nunc mollis, lorem gravida pretium rhoncus, ante erat faucibus diam, tempor porttitor ante nunc quis sapien. Etiam non hendrerit magna. Vestibulum mattis tortor et ultrices viverra. Nulla facilisi. Nullam vestibulum ipsum vel nisi tincidunt cursus. In non tortor quam. Integer posuere erat erat, et laoreet mi fringilla id.
+      In the past, the default application environment involved leaving plaintext information viewable by 3rd party servers. In many cases, this wasn't malicious - there simply hasn't been a simple option available. This has changed as Crypton now empowers companies and developers to realize zero knowledge environments out of the box. This is accomplished by transparently handling the complicated cryptography layers through Crypton and allowing companies to focus on domain specific challenges instead of figuring out how to push privacy and security after the fact.
+    </p>
+    <p>
+      Many developers have previously been wary of the cloud as it once meant sacrificing privacy for convenience. But with Crypton, everyone can take full advantage of the cloud while enjoying the privacy and zero-knowledge that SpiderOak users have come to love.
     </p>
   </div>
 </div>
