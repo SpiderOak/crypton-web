@@ -98,7 +98,7 @@ Behind the scenes, Crypton is:
 * encrypting that delta with the session key
 * saving the new container record with a [Transaction](/docs/concepts/transactions.html)
 
-## Sharing a container with a [Peer](/docs/concepts/peers.js)
+## Sharing a container with a [Peer](/docs/concepts/peers.html)
 
 Assuming you have a trusted Peer object, you can do the following:
 
