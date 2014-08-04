@@ -48,12 +48,6 @@ npm link
 sudo -u postgres psql postgres
 ````
 
-## Running Redis
-
-````bash
-echo 'daemonize yes' | redis-server -
-````
-
 ## Running the tests
 
 ````bash
