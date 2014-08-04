@@ -13,23 +13,23 @@ Crypton's database stores an encrypted set of keys for each user, called their K
 
 ````sql
 CREATE TABLE base_keyring (
-    base_keyring_id int8 primary key,
-    account_id int8 references account,
-    creation_time timestamp default current_timestamp,
-    srp_verifier bytea,
-    srp_salt bytea,
-    keypair_salt bytea,
-    keypair_mac_salt bytea,
-    keypair bytea,
-    keypair_mac bytea,
-    pubkey bytea,
-    container_name_hmac_key bytea,
-    hmac_key bytea,
-    sign_key_pub bytea,
-    sign_key_private_mac_salt bytea,
-    sign_key_private_ciphertext bytea,
-    sign_key_private_mac bytea,
-    deletion_time timestamp
+  base_keyring_id int8 primary key,
+  account_id int8 references account,
+  creation_time timestamp default current_timestamp,
+  srp_verifier bytea,
+  srp_salt bytea,
+  keypair_salt bytea,
+  keypair_mac_salt bytea,
+  keypair bytea,
+  keypair_mac bytea,
+  pubkey bytea,
+  container_name_hmac_key bytea,
+  hmac_key bytea,
+  sign_key_pub bytea,
+  sign_key_private_mac_salt bytea,
+  sign_key_private_ciphertext bytea,
+  sign_key_private_mac bytea,
+  deletion_time timestamp
 );
 ````
 
