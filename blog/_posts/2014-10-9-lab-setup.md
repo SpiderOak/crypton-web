@@ -10,7 +10,10 @@ At our Hack in the Box lab session, we will be
 2. walking through using Crypton APIs
 3. and building a Crypton-powered application together
 
-If you'd like to follow along throughout the interactive parts, you will need to do the following.
+We have a server running at [https://nulltxt.se:2015](https://nulltxt.se:1025) with Crypton serving up
+the lab template. This should be sufficient for joining in.
+
+If you'd like to run your own Crypton server, the following steps should make it easy.
 It can take a bit of time to download the docker images if you haven't pulled them yet, so it's
 recommended to do this ahead of time.
 
@@ -78,5 +81,16 @@ The SSL certificate that comes with Crypton is purposefully expired, so the `-k`
 ## Open up the walkthrough
 
 ````
+git clone git@github.com:daviddahl/crypton-live-code.git
+cd crypton-live-code
+open index.html
+````
 
+## Point your client to your server
+
+In a `<script>` in `index.html`, put the following:
+
+````javascript
+crypton.host = 'localhost';
+// or the ip of your VM if you didn't forward the port
 ````
