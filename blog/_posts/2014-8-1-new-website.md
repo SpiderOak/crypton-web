@@ -11,4 +11,4 @@ Crypton has a shiny new site! With over 500 stars on GitHub, a [Crypton-powered 
 
 Along with working on mobile devices, we've completely rewritten the documentation and started a blog to post updates about Crypton and give ourselves a place to complain about things.
 
-We're still working on stuff. All of the [code for the website is on GitHub](https://github.com/spideroak/crypton-web), including this blog, so if you find a typo or something doesn't work, feel free to open up an issue. We're also avilable on [Twitter](https://twitter.com/crypton_io) and IRC (#crypton on [OFTC](http://www.oftc.net/)).
+We're still working on stuff. All of the [code for the website is on GitHub](https://github.com/spideroak/crypton-web), including this blog, so if you find a typo or something doesn't work, feel free to open up an issue. We're also available on [Twitter](https://twitter.com/crypton_io) and IRC (#crypton on [OFTC](http://www.oftc.net/)).
