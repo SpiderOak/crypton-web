@@ -59,7 +59,7 @@ title: Hosted
 <div class="col-sm-12 clear text-center">
   <h2>Starting at $10/month</h2>
   <p class="subheader2">
-    Sign up to be notified when we release our hosted backend
+    Sign up to be notified when we release our hosted backend and get one month free.
   </p>
   <!-- Begin MailChimp Signup Form -->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
