@@ -112,6 +112,17 @@ h2 {
   color: #fff;
 }
 
+.hero-unit .btn-success {
+  background: #fff;
+  border-color: green;
+  color: green;
+}
+
+.hero-unit .btn-success:hover {
+  background: green;
+  color: #fff;
+}
+
 .hero-unit {
   text-align: center;
   padding: 0;
