@@ -23,6 +23,11 @@ sudo apt-get install nodejs
 ````bash
 sudo apt-get install postgresql
 # it should now be running, no need to start it if everything went well
+
+psql --version
+# note the first two digits in the version number from the response and insert in the next command
+sudo apt-get install postgresql-server-dev-XX.XX
+
 ````
 
 ## Installing Redis
