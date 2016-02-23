@@ -27,4 +27,4 @@ Our second audit was concluded on March 24, 2014.
 
 It focused on the change of Crypton's authorization protocol to SRP. 19 issues were reported. Work is ongoing on tying up loose ends.
 
-The report may be [downloaded here](http://www.leviathansecurity.com/wp-content/uploads/Crypton_2014_pentest_Final_Report.pdf).
+The report may be [downloaded here](http://web.archive.org/web/20150403175113/http://www.leviathansecurity.com/wp-content/uploads/SpiderOak-Crypton_pentest-Final_report_u.pdf).
